@@ -1,0 +1,347 @@
+[ 2017-08-15T09:03:32+08:00 ] 127.0.0.1 /Home/User/user_list
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.024002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.025002s ]
+
+[ 2017-08-15T09:03:32+08:00 ] 127.0.0.1 /Home/Index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.056003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.056003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.007000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.008001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008001s ]
+
+[ 2017-08-15T09:03:37+08:00 ] 127.0.0.1 /Home/Index/login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM cs_user as a [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_user as a
+SQL: SELECT `user_Id`,a.company_id,`username`,`real_name`,`is_use`,b.company_name,`company_type`,b.company_num FROM cs_user as a LEFT JOIN `cs_company` as b ON a.company_id=b.company_id  WHERE ( `username` = 'admin' ) AND ( `password` = 'c7587f7409d4fe85cd5faaceb727146f' ) LIMIT 1   [ RunTime:0.137008s ]
+SQL: SHOW COLUMNS FROM cs_userrole as a [ RunTime:0.001000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_userrole as a
+SQL: SELECT `role_name`,`role_type`,`role_identity`,`role_position`,`role_num` FROM cs_userrole as a LEFT JOIN `cs_role` as b ON a.role_Id = b.role_Id  WHERE ( `user_Id`='6' ) LIMIT 1   [ RunTime:0.029001s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\www\zwt\ThinkPHP\Common\functions.php 第 1092 行.
+
+[ 2017-08-15T09:03:38+08:00 ] 127.0.0.1 /Home/User
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM cs_userrole as a [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_userrole as a
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 ) ))  [ RunTime:0.040003s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = 0 and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.017001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '1' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.018001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '46' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.018001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '44' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.018001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '41' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.020001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '24' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.018001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '21' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.019001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '29' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.019001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '36' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.019001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '27' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.019002s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '63' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.019001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '66' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.019001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '70' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.019001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '73' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.019001s ]
+NOTIC: [8] Undefined index: begin E:\www\zwt\ThinkPHP\Common\functions.php 第 90 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 80 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 80 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 80 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 80 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 80 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 80 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 80 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 80 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 80 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 80 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 80 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 80 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 80 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.037002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-15T10:23:04+08:00 ] 127.0.0.1 /wxchat
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Missing argument 2 for Wxchat\Controller\CommonController::JsApi_pub(), called in E:\www\zwt\Application\Wxchat\Controller\IndexController.class.php on line 10 and defined E:\www\zwt\Application\Wxchat\Controller\CommonController.class.php 第 23 行.
+
+[ 2017-08-15T10:23:26+08:00 ] 127.0.0.1 /Service
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-15T10:24:14+08:00 ] 127.0.0.1 /Service
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-08-15T10:24:26+08:00 ] 127.0.0.1 /Service/Api/sign/safe/1a175f65b750141a204f43bf96049122/
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-15T10:26:45+08:00 ] 127.0.0.1 /Service/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-15T10:26:51+08:00 ] 127.0.0.1 /Service/index/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-15T10:26:57+08:00 ] 127.0.0.1 /Service/index/aaa
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: Method Service\Controller\IndexController::__call() does not exist
+
+[ 2017-08-15T10:27:09+08:00 ] 127.0.0.1 /Service/index/asdasd
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: Method Service\Controller\IndexController::__call() does not exist
+
+[ 2017-08-15T10:27:21+08:00 ] 127.0.0.1 /Service/Index/asdasd
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+ERR: Method Service\Controller\IndexController::__call() does not exist
+
+[ 2017-08-15T10:27:34+08:00 ] 127.0.0.1 /Service/Index/
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-08-15T10:51:15+08:00 ] 127.0.0.1 /Service/Api/inventoryService
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-08-15T10:51:25+08:00 ] 127.0.0.1 /Service/Api/inventoryService/safe/fc58d95f9c2d44a48f060021cb61cb7e
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-15T10:52:52+08:00 ] 127.0.0.1 /Service/Api/inventoryService/safe/fc58d95f9c2d44a48f060021cb61cb7e/userid/185
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+
+[ 2017-08-15T10:53:46+08:00 ] 127.0.0.1 /Service/Api/inventoryService/safe/fc58d95f9c2d44a48f060021cb61cb7e/userid/184/busid/271
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+NOTIC: [8] Undefined variable: res E:\www\zwt\Application\Service\Controller\ApiController.class.php 第 1185 行.
+
+[ 2017-08-15T11:09:26+08:00 ] 127.0.0.1 /Service/Api/inventoryService/safe/fc58d95f9c2d44a48f060021cb61cb7e/userid/184/busid/271
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-08-15T11:14:21+08:00 ] 127.0.0.1 /Service/Api/inventoryService/safe/fc58d95f9c2d44a48f060021cb61cb7e/userid/184/busid/271
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-15T11:14:26+08:00 ] 127.0.0.1 /Service/Api/inventoryService/safe/fc58d95f9c2d44a48f060021cb61cb7e/userid/184/busid/271
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-15T11:14:32+08:00 ] 127.0.0.1 /Service/Api/inventoryService/safe/fc58d95f9c2d44a48f060021cb61cb7e/userid/184/busid/271
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-15T11:31:16+08:00 ] 127.0.0.1 /Service/Api/inventoryService/safe/fc58d95f9c2d44a48f060021cb61cb7e/userid/184/busid/271
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-08-15T11:32:32+08:00 ] 127.0.0.1 /Service/Api/inventoryService/safe/fc58d95f9c2d44a48f060021cb61cb7e/userid/184/busid/271
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-08-15T11:32:53+08:00 ] 127.0.0.1 /Service/Api/inventoryService/safe/fc58d95f9c2d44a48f060021cb61cb7e/userid/184/busid/271
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-15T11:33:31+08:00 ] 127.0.0.1 /Service/Api/inventoryService/safe/fc58d95f9c2d44a48f060021cb61cb7e/userid/184/busid/271
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-15T11:33:40+08:00 ] 127.0.0.1 /Service/Api/inventoryService/safe/fc58d95f9c2d44a48f060021cb61cb7e/userid/184/busid/271
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-08-15T11:35:53+08:00 ] 127.0.0.1 /Service/Api/inventoryService/safe/fc58d95f9c2d44a48f060021cb61cb7e/userid/184/busid/271
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-15T11:35:54+08:00 ] 127.0.0.1 /Service/Api/inventoryService/safe/fc58d95f9c2d44a48f060021cb61cb7e/userid/184/busid/271
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-15T11:35:54+08:00 ] 127.0.0.1 /Service/Api/inventoryService/safe/fc58d95f9c2d44a48f060021cb61cb7e/userid/184/busid/271
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-15T11:36:07+08:00 ] 127.0.0.1 /Service/Api/inventoryService/safe/fc58d95f9c2d44a48f060021cb61cb7e/userid/184/busid/271
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-08-15T11:38:09+08:00 ] 127.0.0.1 /Service/Api/inventoryService/safe/fc58d95f9c2d44a48f060021cb61cb7e/userid/184/busid/271
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-08-15T11:38:10+08:00 ] 127.0.0.1 /Service/Api/inventoryService/safe/fc58d95f9c2d44a48f060021cb61cb7e/userid/184/busid/271
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-08-15T11:38:10+08:00 ] 127.0.0.1 /Service/Api/inventoryService/safe/fc58d95f9c2d44a48f060021cb61cb7e/userid/184/busid/271
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-15T11:47:18+08:00 ] 127.0.0.1 /Service/Api/inventoryService/safe/fc58d95f9c2d44a48f060021cb61cb7e/userid/184/busid/271
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-15T11:47:31+08:00 ] 127.0.0.1 /Service/Api/inventoryService/safe/fc58d95f9c2d44a48f060021cb61cb7e/userid/184/busid/271
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: model E:\www\zwt\Application\Service\Controller\ApiController.class.php 第 1207 行.
+
+[ 2017-08-15T11:47:36+08:00 ] 127.0.0.1 /Service/Api/inventoryService/safe/fc58d95f9c2d44a48f060021cb61cb7e/userid/184/busid/271
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-15T11:47:42+08:00 ] 127.0.0.1 /Service/Api/inventoryService/safe/fc58d95f9c2d44a48f060021cb61cb7e/userid/184/busid/271
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-15T11:52:07+08:00 ] 127.0.0.1 /Service/Api/inventoryService/safe/fc58d95f9c2d44a48f060021cb61cb7e/userid/184/busid/271
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: id E:\www\zwt\Application\Service\Controller\ApiController.class.php 第 1212 行.
+NOTIC: [8] Undefined index: num E:\www\zwt\Application\Service\Controller\ApiController.class.php 第 1212 行.
+NOTIC: [8] Undefined index: num E:\www\zwt\Application\Service\Controller\ApiController.class.php 第 1212 行.
+NOTIC: [8] Undefined index: id E:\www\zwt\Application\Service\Controller\ApiController.class.php 第 1212 行.
+NOTIC: [8] Undefined index: num E:\www\zwt\Application\Service\Controller\ApiController.class.php 第 1212 行.
+NOTIC: [8] Undefined index: num E:\www\zwt\Application\Service\Controller\ApiController.class.php 第 1212 行.
+NOTIC: [8] Undefined index: id E:\www\zwt\Application\Service\Controller\ApiController.class.php 第 1212 行.
+NOTIC: [8] Undefined index: num E:\www\zwt\Application\Service\Controller\ApiController.class.php 第 1212 行.
+NOTIC: [8] Undefined index: num E:\www\zwt\Application\Service\Controller\ApiController.class.php 第 1212 行.
+NOTIC: [8] Undefined index: id E:\www\zwt\Application\Service\Controller\ApiController.class.php 第 1212 行.
+NOTIC: [8] Undefined index: num E:\www\zwt\Application\Service\Controller\ApiController.class.php 第 1212 行.
+NOTIC: [8] Undefined index: num E:\www\zwt\Application\Service\Controller\ApiController.class.php 第 1212 行.
+NOTIC: [8] Undefined index: id E:\www\zwt\Application\Service\Controller\ApiController.class.php 第 1212 行.
+NOTIC: [8] Undefined index: num E:\www\zwt\Application\Service\Controller\ApiController.class.php 第 1212 行.
+NOTIC: [8] Undefined index: num E:\www\zwt\Application\Service\Controller\ApiController.class.php 第 1212 行.
+
+[ 2017-08-15T11:52:25+08:00 ] 127.0.0.1 /Service/Api/inventoryService/safe/fc58d95f9c2d44a48f060021cb61cb7e/userid/184/busid/271
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-15T11:54:03+08:00 ] 127.0.0.1 /Service/Api/inventoryService/safe/fc58d95f9c2d44a48f060021cb61cb7e/userid/184/busid/271
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: INSERT INTO `cs_business_inventory` (business_id,pro_id,pro_num,inventory_type,addtime) VALUES (271,131441,2,2,1,'1502769243'),(271,131443,3,3,1,'1502769243'),(271,131446,1,1,2,'1502769243'),(271,131441,2,2,2,'1502769243'),(271,131443,3,3,2,'1502769243') [ RunTime:0.000000s ]
+ERR: 1136:Column count doesn't match value count at row 1
+ [ SQL语句 ] : INSERT INTO `cs_business_inventory` (business_id,pro_id,pro_num,inventory_type,addtime) VALUES (271,131441,2,2,1,'1502769243'),(271,131443,3,3,1,'1502769243'),(271,131446,1,1,2,'1502769243'),(271,131441,2,2,2,'1502769243'),(271,131443,3,3,2,'1502769243')
+
+[ 2017-08-15T11:54:24+08:00 ] 127.0.0.1 /Service/Api/inventoryService/safe/fc58d95f9c2d44a48f060021cb61cb7e/userid/184/busid/271
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-15T11:56:20+08:00 ] 127.0.0.1 /Service/Api/inventoryService/safe/fc58d95f9c2d44a48f060021cb61cb7e/userid/184/busid/271
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: INSERT INTO `cs_business_inventory` (business_id,pro_id,pro_num,inventory_type,addtime) VALUES (271,131441,2,2,1,1502769380),(271,131443,3,3,1,1502769380),(271,131446,1,1,2,1502769380),(271,131441,2,2,2,1502769380),(271,131443,3,3,2,1502769380) [ RunTime:0.001000s ]
+ERR: 1136:Column count doesn't match value count at row 1
+ [ SQL语句 ] : INSERT INTO `cs_business_inventory` (business_id,pro_id,pro_num,inventory_type,addtime) VALUES (271,131441,2,2,1,1502769380),(271,131443,3,3,1,1502769380),(271,131446,1,1,2,1502769380),(271,131441,2,2,2,1502769380),(271,131443,3,3,2,1502769380)
+
+[ 2017-08-15T11:56:22+08:00 ] 127.0.0.1 /Service/Api/inventoryService/safe/fc58d95f9c2d44a48f060021cb61cb7e/userid/184/busid/271
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: INSERT INTO `cs_business_inventory` (business_id,pro_id,pro_num,inventory_type,addtime) VALUES (271,131441,2,2,1,1502769382),(271,131443,3,3,1,1502769382),(271,131446,1,1,2,1502769382),(271,131441,2,2,2,1502769382),(271,131443,3,3,2,1502769382) [ RunTime:0.000000s ]
+ERR: 1136:Column count doesn't match value count at row 1
+ [ SQL语句 ] : INSERT INTO `cs_business_inventory` (business_id,pro_id,pro_num,inventory_type,addtime) VALUES (271,131441,2,2,1,1502769382),(271,131443,3,3,1,1502769382),(271,131446,1,1,2,1502769382),(271,131441,2,2,2,1502769382),(271,131443,3,3,2,1502769382)
+
+[ 2017-08-15T11:56:27+08:00 ] 127.0.0.1 /Service/Api/inventoryService/safe/fc58d95f9c2d44a48f060021cb61cb7e/userid/184/busid/271
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-08-15T11:57:57+08:00 ] 127.0.0.1 /Service/Api/inventoryService/safe/fc58d95f9c2d44a48f060021cb61cb7e/userid/184/busid/271
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: INSERT INTO `cs_business_inventory` (business_id,pro_id,pro_num,inventory_type,addtime) VALUES (271,131441,2,1,1502769477),(271,131443,3,1,1502769477),(271,131446,1,2,1502769477),(271,131441,2,2,1502769477),(271,131443,3,2,1502769477) [ RunTime:0.075004s ]
+
+[ 2017-08-15T12:01:19+08:00 ] 127.0.0.1 /Service/Api/inventoryService/safe/fc58d95f9c2d44a48f060021cb61cb7e/userid/184/busid/271
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: INSERT INTO `cs_business_inventory` (business_id,pro_id,pro_num,inventory_type,addtime) VALUES (271,131441,2,1,1502769679),(271,131443,3,1,1502769679),(271,131446,1,2,1502769679),(271,131441,2,2,1502769679),(271,131443,3,2,1502769679) [ RunTime:0.028001s ]
+

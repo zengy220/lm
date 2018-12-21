@@ -1,0 +1,269 @@
+[ 2018-09-29T10:24:09+08:00 ] 192.168.0.43 /Home/Questionsearch/answer
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001918s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003266s ]
+ERR: 无法加载控制器:Questionsearch
+
+[ 2018-09-29T10:24:13+08:00 ] 192.168.0.43 /Home
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001254s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002354s ]
+
+[ 2018-09-29T10:24:14+08:00 ] 192.168.0.43 /Home/User/
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001082s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001713s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM cs_userrole as a [ RunTime:0.000160s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_userrole as a
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = 0 and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.022280s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '1' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.013607s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '63' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.013545s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '66' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.013570s ]
+NOTIC: [8] Undefined index: begin C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Common\functions.php 第 90 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000082s ]
+NOTIC: [8] Undefined index: key C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 80 行.
+NOTIC: [8] Undefined index: key C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 80 行.
+NOTIC: [8] Undefined index: key C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 80 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.016008s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016053s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001490s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001521s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001605s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001642s ]
+
+[ 2018-09-29T10:24:18+08:00 ] 192.168.0.43 /Home/Advertise/ad_list
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001381s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003455s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM cs_userrole as a [ RunTime:0.000165s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_userrole as a
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = 0 and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.014313s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '1' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.015350s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '63' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.014515s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '66' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.013533s ]
+NOTIC: [8] Undefined index: begin C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Common\functions.php 第 90 行.
+SQL: SHOW COLUMNS FROM cs_ad_list as t1 [ RunTime:0.000393s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as t1' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_ad_list as t1
+SQL: SELECT t2.sum_1,t1.id,t1.name,t1.simple_code,t1.illustration FROM cs_ad_list as t1 left JOIN (select count(id) as sum_1,ad_list_id from cs_ad_content GROUP BY ad_list_id) t2 on t2.ad_list_id =t1.id    [ RunTime:0.008632s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000044s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000091s ]
+NOTIC: [8] Undefined index: key C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Home\1efdc2c59a0a78e8d13eb06ac249228d.php 第 73 行.
+NOTIC: [8] Undefined index: key C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Home\1efdc2c59a0a78e8d13eb06ac249228d.php 第 73 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.015137s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015177s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000906s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000935s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001125s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001168s ]
+
+[ 2018-09-29T10:24:20+08:00 ] 192.168.0.43 /Home/Advertise/ad_content_list
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001112s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001813s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM cs_userrole as a [ RunTime:0.000147s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_userrole as a
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = 0 and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.013969s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '1' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.014091s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '63' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.014492s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '66' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.014509s ]
+NOTIC: [8] Undefined index: begin C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Common\functions.php 第 90 行.
+SQL: SHOW COLUMNS FROM `cs_ad_content` [ RunTime:0.007692s ]
+SQL: SELECT * FROM `cs_ad_content` WHERE ( 1=1 ) ORDER BY sort asc  [ RunTime:0.000377s ]
+SQL: SHOW COLUMNS FROM `cs_ad_list` [ RunTime:0.008973s ]
+SQL: SELECT * FROM `cs_ad_list`  [ RunTime:0.000225s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000043s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000106s ]
+NOTIC: [8] Undefined index: key C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Home\a2b76193c1c44d0bd9ff528d3130d3ef.php 第 73 行.
+NOTIC: [8] Undefined index: key C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Home\a2b76193c1c44d0bd9ff528d3130d3ef.php 第 73 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.014921s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014958s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001068s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001106s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001343s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001391s ]
+
+[ 2018-09-29T10:24:45+08:00 ] 192.168.0.43 /Home/Advertise/ad_content_list
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001133s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001790s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM cs_userrole as a [ RunTime:0.000171s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_userrole as a
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = 0 and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.014453s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '1' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.014056s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '63' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.015509s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '66' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.014374s ]
+NOTIC: [8] Undefined index: begin C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Common\functions.php 第 90 行.
+SQL: SHOW COLUMNS FROM `cs_ad_content` [ RunTime:0.009302s ]
+SQL: SELECT * FROM `cs_ad_content` WHERE ( 1=1 and ad_list_id='1' ) ORDER BY sort asc  [ RunTime:0.000294s ]
+SQL: SHOW COLUMNS FROM `cs_ad_list` [ RunTime:0.005137s ]
+SQL: SELECT * FROM `cs_ad_list`  [ RunTime:0.000263s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000044s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000083s ]
+NOTIC: [8] Undefined index: key C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Home\a2b76193c1c44d0bd9ff528d3130d3ef.php 第 73 行.
+NOTIC: [8] Undefined index: key C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Home\a2b76193c1c44d0bd9ff528d3130d3ef.php 第 73 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.014849s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014893s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001381s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001437s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001170s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001210s ]
+
+[ 2018-09-29T10:26:36+08:00 ] 192.168.0.43 /Home/Column/content_list
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001948s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003355s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM cs_userrole as a [ RunTime:0.000191s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_userrole as a
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = 0 and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.015431s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '1' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.013602s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '63' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.014835s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '66' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.014527s ]
+NOTIC: [8] Undefined index: begin C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Common\functions.php 第 90 行.
+SQL: SHOW COLUMNS FROM `cs_content_content` [ RunTime:0.011757s ]
+SQL: SHOW COLUMNS FROM `cs_content_category` [ RunTime:0.009862s ]
+SQL: SELECT `id`,`pid`,`name`,`status` FROM `cs_content_category` WHERE ( `pid` = 0 ) ORDER BY sort asc  [ RunTime:0.000864s ]
+SQL: SELECT `id`,`pid`,`name`,`status` FROM `cs_content_category` WHERE ( `pid` = 1 ) ORDER BY sort asc  [ RunTime:0.000325s ]
+SQL: SELECT `id`,`pid`,`name`,`status` FROM `cs_content_category` WHERE ( `pid` = 2 ) ORDER BY sort asc  [ RunTime:0.000260s ]
+SQL: SELECT `id`,`pid`,`name`,`status` FROM `cs_content_category` WHERE ( `pid` = 4 ) ORDER BY sort asc  [ RunTime:0.000248s ]
+SQL: SELECT `id`,`pid`,`name`,`status` FROM `cs_content_category` WHERE ( `pid` = 3 ) ORDER BY sort asc  [ RunTime:0.000237s ]
+SQL: SELECT `id`,`pid`,`name`,`status` FROM `cs_content_category` WHERE ( `pid` = 5 ) ORDER BY sort asc  [ RunTime:0.000242s ]
+SQL: select * from cs_content_content where 1=1  order by istop desc,create_time desc,update_time desc [ RunTime:0.000902s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000125s ]
+NOTIC: [8] Undefined index: key C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Home\fd254018c4369c34bb49168b7a47c67c.php 第 76 行.
+NOTIC: [8] Undefined index: key C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Home\fd254018c4369c34bb49168b7a47c67c.php 第 76 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.016468s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016508s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000970s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001246s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001291s ]
+
+[ 2018-09-29T10:26:42+08:00 ] 192.168.0.43 /Home/Advertise/ad_content_list
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001658s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002749s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM cs_userrole as a [ RunTime:0.000116s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_userrole as a
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = 0 and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.013583s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '1' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.014067s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '63' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.015166s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '66' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.013975s ]
+NOTIC: [8] Undefined index: begin C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Common\functions.php 第 90 行.
+SQL: SHOW COLUMNS FROM `cs_ad_content` [ RunTime:0.007909s ]
+SQL: SELECT * FROM `cs_ad_content` WHERE ( 1=1 ) ORDER BY sort asc  [ RunTime:0.000344s ]
+SQL: SHOW COLUMNS FROM `cs_ad_list` [ RunTime:0.005091s ]
+SQL: SELECT * FROM `cs_ad_list`  [ RunTime:0.000253s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000151s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000393s ]
+NOTIC: [8] Undefined index: key C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Home\a2b76193c1c44d0bd9ff528d3130d3ef.php 第 73 行.
+NOTIC: [8] Undefined index: key C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Home\a2b76193c1c44d0bd9ff528d3130d3ef.php 第 73 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.015070s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015108s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000974s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001017s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001273s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001312s ]
+
+[ 2018-09-29T10:27:02+08:00 ] 192.168.0.43 /Home/Advertise/ad_content_list
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001741s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003536s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM cs_userrole as a [ RunTime:0.000211s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_userrole as a
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = 0 and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.014242s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '1' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.013154s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '63' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.015203s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '66' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.015348s ]
+NOTIC: [8] Undefined index: begin C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Common\functions.php 第 90 行.
+SQL: SHOW COLUMNS FROM `cs_ad_content` [ RunTime:0.009589s ]
+SQL: SELECT * FROM `cs_ad_content` WHERE ( 1=1 and ad_list_id='5' ) ORDER BY sort asc  [ RunTime:0.000321s ]
+SQL: SHOW COLUMNS FROM `cs_ad_list` [ RunTime:0.004925s ]
+SQL: SELECT * FROM `cs_ad_list`  [ RunTime:0.000249s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000044s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000083s ]
+NOTIC: [8] Undefined index: key C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Home\a2b76193c1c44d0bd9ff528d3130d3ef.php 第 73 行.
+NOTIC: [8] Undefined index: key C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Home\a2b76193c1c44d0bd9ff528d3130d3ef.php 第 73 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.014948s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014986s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000971s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001106s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001169s ]
+
+[ 2018-09-29T10:34:26+08:00 ] 192.168.0.43 /Home/Advertise/ad_content_list
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000810s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001474s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM cs_userrole as a [ RunTime:0.000506s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_userrole as a
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = 0 and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.014365s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '1' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.039426s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '63' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.015537s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '66' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.015174s ]
+NOTIC: [8] Undefined index: begin C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Common\functions.php 第 90 行.
+SQL: SHOW COLUMNS FROM `cs_ad_content` [ RunTime:0.006604s ]
+SQL: SELECT * FROM `cs_ad_content` WHERE ( 1=1 and ad_list_id='5' ) ORDER BY sort asc  [ RunTime:0.000330s ]
+SQL: SHOW COLUMNS FROM `cs_ad_list` [ RunTime:0.007952s ]
+SQL: SELECT * FROM `cs_ad_list`  [ RunTime:0.000311s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000089s ]
+NOTIC: [8] Undefined index: key C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Home\a2b76193c1c44d0bd9ff528d3130d3ef.php 第 73 行.
+NOTIC: [8] Undefined index: key C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Home\a2b76193c1c44d0bd9ff528d3130d3ef.php 第 73 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.019585s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019622s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000778s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000809s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000872s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000904s ]
+

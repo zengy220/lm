@@ -1,0 +1,1040 @@
+[ 2017-08-10T08:47:03+08:00 ] ::1 /
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `cs_content_category` [ RunTime:0.007000s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = 0 ) AND ( `status` = 1 ) ORDER BY sort asc  [ RunTime:0.000000s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 1 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 2 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 3 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 5 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = '' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = '' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `status` = 1 ) AND ( `pid` = null ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = '' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = null ) AND ( `status` = 1 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( tpcode='' and pid=0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( id='' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = null ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM cs_ad_list t1 [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't1' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_ad_list t1
+SQL: SELECT t2.img,t1.id,t2.title,t2.url FROM cs_ad_list t1 left JOIN cs_ad_content t2 on t1.id = t2.ad_list_id  WHERE ( t1.simple_code='' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.006001s ]
+SQL: SHOW COLUMNS FROM cs_content_content as t1 [ RunTime:0.001000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as t1' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_content_content as t1
+SQL: SELECT t1.contents FROM cs_content_content as t1 INNER JOIN cs_content_category as t2 on t1.col_id=t2.id  WHERE ( t2.tpcode='QYWH' and t1.status=1 ) ORDER BY istop desc,t1.create_time desc,update_time desc LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `cs_pro` [ RunTime:0.007000s ]
+SQL: SELECT `id`,`thumb`,`names`,`description` FROM `cs_pro` WHERE ( `sort2` IN (0,2) ) ORDER BY sort asc  [ RunTime:0.001000s ]
+SQL: SELECT `id` FROM `cs_content_category` WHERE ( tpcode='ZXZX' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `status` = 1 ) AND ( `pid` = 3 ) ORDER BY sort asc LIMIT 3   [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `cs_content_content` [ RunTime:0.005000s ]
+SQL: SELECT * FROM `cs_content_content` WHERE ( col_id = 10 and status=1 ) ORDER BY istop desc,create_time desc,update_time desc LIMIT 6   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `cs_content_content` WHERE ( col_id = 26 and status=1 ) ORDER BY istop desc,create_time desc,update_time desc LIMIT 6   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `cs_content_content` WHERE ( col_id = 27 and status=1 ) ORDER BY istop desc,create_time desc,update_time desc LIMIT 6   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM cs_ad_content as t1 [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as t1' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_ad_content as t1
+SQL: SELECT t1.img,t1.url FROM cs_ad_content as t1 INNER JOIN cs_ad_list as t2 on t1.ad_list_id=t2.id  WHERE ( t2.simple_code='SYGG' )  [ RunTime:0.001000s ]
+SQL: SELECT t2.img,t1.id,t2.title,t2.url FROM cs_ad_list t1 left JOIN cs_ad_content t2 on t1.id = t2.ad_list_id  WHERE ( t1.simple_code='SYZXGG' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.005000s ]
+SQL: SELECT t1.contents,t1.title,t1.thumb FROM cs_content_content as t1 INNER JOIN cs_content_category as t2 on t1.col_id=t2.id  WHERE ( t2.tpcode='BLZY' and t1.status=1 ) ORDER BY istop desc,t1.create_time desc,update_time desc LIMIT 3   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-10T08:47:04+08:00 ] ::1 /header.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Header
+
+[ 2017-08-10T08:47:04+08:00 ] ::1 /footer.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Footer
+
+[ 2017-08-10T08:47:08+08:00 ] ::1 /Home
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.022002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-08-10T08:47:13+08:00 ] ::1 /Home/Index/login
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM cs_user as a [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_user as a
+SQL: SELECT `user_Id`,a.company_id,`username`,`real_name`,`is_use`,b.company_name,`company_type`,b.company_num FROM cs_user as a LEFT JOIN `cs_company` as b ON a.company_id=b.company_id  WHERE ( `username` = 'admin' ) AND ( `password` = 'c7587f7409d4fe85cd5faaceb727146f' ) LIMIT 1   [ RunTime:0.077004s ]
+SQL: SHOW COLUMNS FROM cs_userrole as a [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_userrole as a
+SQL: SELECT `role_name`,`role_type`,`role_identity`,`role_position`,`role_num` FROM cs_userrole as a LEFT JOIN `cs_role` as b ON a.role_Id = b.role_Id  WHERE ( `user_Id`='6' ) LIMIT 1   [ RunTime:0.002000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() E:\www\zwt\ThinkPHP\Common\functions.php 第 1092 行.
+
+[ 2017-08-10T08:47:14+08:00 ] ::1 /Home/User
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM cs_userrole as a [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_userrole as a
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 ) ))  [ RunTime:0.035002s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = 0 and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.038002s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '1' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.021002s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '46' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.019001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '44' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.019001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '41' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.019001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '24' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.019001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '21' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.019001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '29' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.019001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '36' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.019001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '27' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.019001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '63' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.019001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '66' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.019002s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '70' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.019001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '73' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.019001s ]
+NOTIC: [8] Undefined index: begin E:\www\zwt\ThinkPHP\Common\functions.php 第 90 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 80 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 80 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 80 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 80 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 80 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 80 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 80 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 80 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 80 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 80 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 80 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 80 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 80 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.026001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-10T10:14:45+08:00 ] ::1 /Home/Register/register_record
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM cs_userrole as a [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_userrole as a
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = 0 and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.019001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '1' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.021002s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '46' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.020001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '44' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.019001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '41' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.020001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '24' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.021001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '21' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.022001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '29' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.020002s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '36' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.021001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '27' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.021001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '63' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.021001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '66' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.022002s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '70' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.021001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '73' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.020001s ]
+NOTIC: [8] Undefined index: begin E:\www\zwt\ThinkPHP\Common\functions.php 第 90 行.
+SQL: SHOW COLUMNS FROM cs_sign_log as a [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_sign_log as a
+NOTIC: [8] Undefined variable: where E:\www\zwt\Application\Home\Controller\RegisterController.class.php 第 44 行.
+SQL: SELECT COUNT(*) AS tp_count FROM cs_sign_log as a LEFT JOIN `cs_business` as b ON a.bus_id=b.busi_id LEFT JOIN `cs_user` as c ON a.saleman_id=c.user_Id  LIMIT 1   [ RunTime:0.094005s ]
+NOTIC: [8] Undefined variable: where E:\www\zwt\Application\Home\Controller\RegisterController.class.php 第 49 行.
+SQL: SELECT a.*,b.name,b.business_id,c.username,c.real_name,`busi_level` FROM cs_sign_log as a LEFT JOIN `cs_business` as b ON a.bus_id=b.busi_id LEFT JOIN `cs_user` as c ON a.saleman_id=c.user_Id  ORDER BY Id desc LIMIT 0,20   [ RunTime:0.001000s ]
+NOTIC: [2] Missing argument 1 for I(), called in E:\www\zwt\Application\Home\Controller\RegisterController.class.php on line 63 and defined E:\www\zwt\ThinkPHP\Common\functions.php 第 220 行.
+NOTIC: [8] Undefined variable: name E:\www\zwt\ThinkPHP\Common\functions.php 第 221 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\670c015800e550717c5d8a991a34ae8e.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\670c015800e550717c5d8a991a34ae8e.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\670c015800e550717c5d8a991a34ae8e.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\670c015800e550717c5d8a991a34ae8e.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\670c015800e550717c5d8a991a34ae8e.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\670c015800e550717c5d8a991a34ae8e.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\670c015800e550717c5d8a991a34ae8e.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\670c015800e550717c5d8a991a34ae8e.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\670c015800e550717c5d8a991a34ae8e.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\670c015800e550717c5d8a991a34ae8e.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\670c015800e550717c5d8a991a34ae8e.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\670c015800e550717c5d8a991a34ae8e.php 第 74 行.
+NOTIC: [8] Undefined index: username E:\www\zwt\Application\Runtime\Cache\Home\670c015800e550717c5d8a991a34ae8e.php 第 101 行.
+NOTIC: [8] Undefined index: business_id E:\www\zwt\Application\Runtime\Cache\Home\670c015800e550717c5d8a991a34ae8e.php 第 103 行.
+NOTIC: [8] Undefined index: name E:\www\zwt\Application\Runtime\Cache\Home\670c015800e550717c5d8a991a34ae8e.php 第 105 行.
+NOTIC: [8] Undefined index: is_today E:\www\zwt\Application\Runtime\Cache\Home\670c015800e550717c5d8a991a34ae8e.php 第 109 行.
+NOTIC: [8] Undefined index: is_today E:\www\zwt\Application\Runtime\Cache\Home\670c015800e550717c5d8a991a34ae8e.php 第 110 行.
+NOTIC: [8] Undefined index: is_today E:\www\zwt\Application\Runtime\Cache\Home\670c015800e550717c5d8a991a34ae8e.php 第 110 行.
+NOTIC: [8] Undefined index: startTime E:\www\zwt\Application\Runtime\Cache\Home\670c015800e550717c5d8a991a34ae8e.php 第 113 行.
+NOTIC: [8] Undefined index: endTime E:\www\zwt\Application\Runtime\Cache\Home\670c015800e550717c5d8a991a34ae8e.php 第 114 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.032001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-08-10T10:14:45+08:00 ] ::1 /Public/font-awesome1/css/font-awesome.css
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Public
+
+[ 2017-08-10T10:49:51+08:00 ] 192.168.1.26 /
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `cs_content_category` [ RunTime:0.011001s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = 0 ) AND ( `status` = 1 ) ORDER BY sort asc  [ RunTime:0.008000s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 1 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 2 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 3 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 5 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = '' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = '' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `status` = 1 ) AND ( `pid` = null ) ORDER BY sort asc  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = '' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = null ) AND ( `status` = 1 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( tpcode='' and pid=0 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( id='' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = null ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM cs_ad_list t1 [ RunTime:0.001000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't1' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_ad_list t1
+SQL: SELECT t2.img,t1.id,t2.title,t2.url FROM cs_ad_list t1 left JOIN cs_ad_content t2 on t1.id = t2.ad_list_id  WHERE ( t1.simple_code='' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.023001s ]
+SQL: SHOW COLUMNS FROM cs_content_content as t1 [ RunTime:0.001000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as t1' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_content_content as t1
+SQL: SELECT t1.contents FROM cs_content_content as t1 INNER JOIN cs_content_category as t2 on t1.col_id=t2.id  WHERE ( t2.tpcode='QYWH' and t1.status=1 ) ORDER BY istop desc,t1.create_time desc,update_time desc LIMIT 1   [ RunTime:0.026002s ]
+SQL: SHOW COLUMNS FROM `cs_pro` [ RunTime:0.006000s ]
+SQL: SELECT `id`,`thumb`,`names`,`description` FROM `cs_pro` WHERE ( `sort2` IN (0,2) ) ORDER BY sort asc  [ RunTime:0.009000s ]
+SQL: SELECT `id` FROM `cs_content_category` WHERE ( tpcode='ZXZX' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `status` = 1 ) AND ( `pid` = 3 ) ORDER BY sort asc LIMIT 3   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `cs_content_content` [ RunTime:0.005001s ]
+SQL: SELECT * FROM `cs_content_content` WHERE ( col_id = 10 and status=1 ) ORDER BY istop desc,create_time desc,update_time desc LIMIT 6   [ RunTime:0.002000s ]
+SQL: SELECT * FROM `cs_content_content` WHERE ( col_id = 26 and status=1 ) ORDER BY istop desc,create_time desc,update_time desc LIMIT 6   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cs_content_content` WHERE ( col_id = 27 and status=1 ) ORDER BY istop desc,create_time desc,update_time desc LIMIT 6   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM cs_ad_content as t1 [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as t1' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_ad_content as t1
+SQL: SELECT t1.img,t1.url FROM cs_ad_content as t1 INNER JOIN cs_ad_list as t2 on t1.ad_list_id=t2.id  WHERE ( t2.simple_code='SYGG' )  [ RunTime:0.000000s ]
+SQL: SELECT t2.img,t1.id,t2.title,t2.url FROM cs_ad_list t1 left JOIN cs_ad_content t2 on t1.id = t2.ad_list_id  WHERE ( t1.simple_code='SYZXGG' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.003000s ]
+SQL: SELECT t1.contents,t1.title,t1.thumb FROM cs_content_content as t1 INNER JOIN cs_content_category as t2 on t1.col_id=t2.id  WHERE ( t2.tpcode='BLZY' and t1.status=1 ) ORDER BY istop desc,t1.create_time desc,update_time desc LIMIT 3   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.052003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.052003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-10T10:49:51+08:00 ] 192.168.1.26 /header.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Header
+
+[ 2017-08-10T10:49:52+08:00 ] 192.168.1.26 /footer.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Footer
+
+[ 2017-08-10T14:53:02+08:00 ] ::1 /Home/Business/business_list
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM cs_userrole as a [ RunTime:0.001000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_userrole as a
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = 0 and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.023001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '1' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.020001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '46' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.021001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '44' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.021002s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '41' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.021001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '24' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.021001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '21' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.021001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '29' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.022001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '36' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.021002s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '27' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.020001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '63' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.022001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '66' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.020001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '70' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.019001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '73' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.019001s ]
+NOTIC: [8] Undefined index: begin E:\www\zwt\ThinkPHP\Common\functions.php 第 90 行.
+SQL: SHOW COLUMNS FROM cs_business as a [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_business as a
+NOTIC: [8] Undefined variable: where E:\www\zwt\Application\Home\Controller\BusinessController.class.php 第 46 行.
+SQL: SELECT COUNT(*) AS tp_count FROM cs_business as a LEFT JOIN `cs_user` as b ON a.saleman_id=b.user_Id LEFT JOIN `cs_business_follow` as c ON a.follpw_Id=c.follpw_Id  LIMIT 1   [ RunTime:0.001001s ]
+NOTIC: [8] Undefined variable: where E:\www\zwt\Application\Home\Controller\BusinessController.class.php 第 50 行.
+SQL: SELECT a.busi_id,a.name,a.businame,a.nikename,a.business_id,a.phone,a.addtime,a.address,a.busi_level,a.busi_type,a.coop_id,a.saleman_id,b.username,b.real_name,c.status as visit_status,c.remarks FROM cs_business as a LEFT JOIN `cs_user` as b ON a.saleman_id=b.user_Id LEFT JOIN `cs_business_follow` as c ON a.follpw_Id=c.follpw_Id  ORDER BY a.addtime desc LIMIT 0,20   [ RunTime:0.001000s ]
+NOTIC: [2] Missing argument 1 for I(), called in E:\www\zwt\Application\Home\Controller\BusinessController.class.php on line 71 and defined E:\www\zwt\ThinkPHP\Common\functions.php 第 220 行.
+NOTIC: [8] Undefined variable: name E:\www\zwt\ThinkPHP\Common\functions.php 第 221 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 74 行.
+NOTIC: [8] Undefined index: business_id E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 103 行.
+NOTIC: [8] Undefined index: name E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 105 行.
+NOTIC: [8] Undefined index: businame E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 107 行.
+NOTIC: [8] Undefined index: phone E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 109 行.
+NOTIC: [8] Undefined index: nikename E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 111 行.
+NOTIC: [8] Undefined index: real_name E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 113 行.
+NOTIC: [8] Undefined index: username E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 115 行.
+NOTIC: [8] Undefined index: genjin E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 119 行.
+NOTIC: [8] Undefined index: genjin E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 119 行.
+NOTIC: [8] Undefined index: genjin E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 120 行.
+NOTIC: [8] Undefined index: genjin E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 121 行.
+NOTIC: [8] Undefined index: startTime E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 124 行.
+NOTIC: [8] Undefined index: endTime E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 125 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.042002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-10T14:53:02+08:00 ] ::1 /Public/font-awesome1/css/font-awesome.css
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Public
+
+[ 2017-08-10T14:53:12+08:00 ] ::1 /Home/Business/business_list_export
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM cs_userrole as a [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_userrole as a
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = 0 and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.018001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '1' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.019002s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '46' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.020001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '44' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.020001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '41' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.020001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '24' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.020001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '21' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.020001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '29' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.019001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '36' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.022002s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '27' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.020001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '63' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.019001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '66' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.020001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '70' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.020001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '73' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.022001s ]
+NOTIC: [8] Undefined index: begin E:\www\zwt\ThinkPHP\Common\functions.php 第 90 行.
+SQL: SHOW COLUMNS FROM cs_business as a [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_business as a
+NOTIC: [8] Undefined variable: where E:\www\zwt\Application\Home\Controller\BusinessController.class.php 第 114 行.
+SQL: SELECT a.business_id,a.coop_id,a.name,a.businame,a.phone,a.address,a.busi_type,a.busi_level,b.username,b.real_name,a.is_bind,a.status,c.remarks,c.status as visit_status FROM cs_business as a LEFT JOIN `cs_user` as b ON a.saleman_id=b.user_Id LEFT JOIN `cs_business_follow` as c ON a.follpw_Id=c.follpw_Id  ORDER BY a.addtime desc  [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-10T14:53:17+08:00 ] ::1 /Home/Business/business_list_export
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM cs_userrole as a [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_userrole as a
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = 0 and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.021001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '1' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.022001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '46' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.021002s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '44' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.022001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '41' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.020001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '24' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.021001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '21' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.023002s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '29' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.024001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '36' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.022001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '27' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.021001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '63' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.021002s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '66' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.020001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '70' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.023001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '73' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.023001s ]
+NOTIC: [8] Undefined index: begin E:\www\zwt\ThinkPHP\Common\functions.php 第 90 行.
+SQL: SHOW COLUMNS FROM cs_business as a [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_business as a
+NOTIC: [8] Undefined variable: where E:\www\zwt\Application\Home\Controller\BusinessController.class.php 第 114 行.
+SQL: SELECT a.business_id,a.coop_id,a.name,a.businame,a.phone,a.address,a.busi_type,a.busi_level,b.username,b.real_name,a.is_bind,a.status,c.remarks,c.status as visit_status FROM cs_business as a LEFT JOIN `cs_user` as b ON a.saleman_id=b.user_Id LEFT JOIN `cs_business_follow` as c ON a.follpw_Id=c.follpw_Id  ORDER BY a.addtime desc  [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-10T14:53:52+08:00 ] ::1 /Home/Business/business_list_export
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM cs_userrole as a [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_userrole as a
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = 0 and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.019001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '1' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.021002s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '46' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.020001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '44' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.021001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '41' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.020001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '24' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.020001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '21' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.019001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '29' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.021002s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '36' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.020001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '27' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.019001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '63' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.020001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '66' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.022001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '70' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.021002s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '73' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.021001s ]
+NOTIC: [8] Undefined index: begin E:\www\zwt\ThinkPHP\Common\functions.php 第 90 行.
+SQL: SHOW COLUMNS FROM cs_business as a [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_business as a
+NOTIC: [8] Undefined variable: where E:\www\zwt\Application\Home\Controller\BusinessController.class.php 第 114 行.
+SQL: SELECT a.business_id,a.coop_id,a.name,a.businame,a.phone,a.address,a.busi_type,a.busi_level,b.username,b.real_name,a.is_bind,a.status,c.remarks,c.status as visit_status FROM cs_business as a LEFT JOIN `cs_user` as b ON a.saleman_id=b.user_Id LEFT JOIN `cs_business_follow` as c ON a.follpw_Id=c.follpw_Id  ORDER BY a.addtime desc  [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-10T15:30:05+08:00 ] ::1 /Home/Business/change_saleman
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM cs_userrole as a [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_userrole as a
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = 0 and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.020001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '1' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.020002s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '46' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.020001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '44' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.022001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '41' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.022001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '24' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.020001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '21' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.021002s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '29' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.021001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '36' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.021001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '27' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.020001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '63' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.020001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '66' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.020001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '70' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.022002s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '73' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.020001s ]
+NOTIC: [8] Undefined index: begin E:\www\zwt\ThinkPHP\Common\functions.php 第 90 行.
+SQL: SHOW COLUMNS FROM cs_business as a [ RunTime:0.001000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_business as a
+NOTIC: [8] Undefined variable: where E:\www\zwt\Application\Home\Controller\BusinessController.class.php 第 711 行.
+SQL: SELECT `busi_id`,`business_id`,`coop_id`,`name`,`businame`,`phone`,`address`,`busi_type`,`busi_level`,`is_bind`,`status`,`username`,`real_name` FROM cs_business as a LEFT JOIN cs_user as b ON a.saleman_id=b.user_Id  ORDER BY a.addtime desc  [ RunTime:0.001000s ]
+NOTIC: [2] Missing argument 1 for I(), called in E:\www\zwt\Application\Home\Controller\BusinessController.class.php on line 729 and defined E:\www\zwt\ThinkPHP\Common\functions.php 第 220 行.
+NOTIC: [8] Undefined variable: name E:\www\zwt\ThinkPHP\Common\functions.php 第 221 行.
+SQL: SELECT c.user_Id,c.username,c.real_name,c.company_id FROM cs_userrole as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id LEFT JOIN `cs_user` as c ON a.user_Id=c.user_Id  WHERE ( b.role_position=3 and c.is_use=1 )  [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\77a56432b965f451019982e4977470cb.php 第 73 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\77a56432b965f451019982e4977470cb.php 第 73 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\77a56432b965f451019982e4977470cb.php 第 73 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\77a56432b965f451019982e4977470cb.php 第 73 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\77a56432b965f451019982e4977470cb.php 第 73 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\77a56432b965f451019982e4977470cb.php 第 73 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\77a56432b965f451019982e4977470cb.php 第 73 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\77a56432b965f451019982e4977470cb.php 第 73 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\77a56432b965f451019982e4977470cb.php 第 73 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\77a56432b965f451019982e4977470cb.php 第 73 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\77a56432b965f451019982e4977470cb.php 第 73 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\77a56432b965f451019982e4977470cb.php 第 73 行.
+NOTIC: [8] Undefined index: number E:\www\zwt\Application\Runtime\Cache\Home\77a56432b965f451019982e4977470cb.php 第 99 行.
+NOTIC: [8] Undefined index: business_id E:\www\zwt\Application\Runtime\Cache\Home\77a56432b965f451019982e4977470cb.php 第 103 行.
+NOTIC: [8] Undefined variable: status E:\www\zwt\Application\Runtime\Cache\Home\77a56432b965f451019982e4977470cb.php 第 108 行.
+NOTIC: [8] Undefined variable: status E:\www\zwt\Application\Runtime\Cache\Home\77a56432b965f451019982e4977470cb.php 第 109 行.
+NOTIC: [8] Undefined variable: status E:\www\zwt\Application\Runtime\Cache\Home\77a56432b965f451019982e4977470cb.php 第 110 行.
+NOTIC: [8] Undefined variable: user_info E:\www\zwt\Application\Runtime\Cache\Home\77a56432b965f451019982e4977470cb.php 第 116 行.
+NOTIC: [8] Undefined variable: show E:\www\zwt\Application\Runtime\Cache\Home\77a56432b965f451019982e4977470cb.php 第 179 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.047003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-10T15:30:05+08:00 ] ::1 /Public/font-awesome1/css/font-awesome.css
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Public
+
+[ 2017-08-10T15:30:05+08:00 ] ::1 /Public/js/excanvas.min.js
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Public
+
+[ 2017-08-10T15:30:11+08:00 ] ::1 /Home/Business/business_list
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM cs_userrole as a [ RunTime:0.001000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_userrole as a
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = 0 and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.019001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '1' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.020002s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '46' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.020001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '44' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.024001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '41' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.022001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '24' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.023002s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '21' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.020001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '29' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.020001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '36' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.021001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '27' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.021001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '63' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.021001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '66' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.021001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '70' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.021001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '73' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.021001s ]
+NOTIC: [8] Undefined index: begin E:\www\zwt\ThinkPHP\Common\functions.php 第 90 行.
+SQL: SHOW COLUMNS FROM cs_business as a [ RunTime:0.001000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_business as a
+NOTIC: [8] Undefined variable: where E:\www\zwt\Application\Home\Controller\BusinessController.class.php 第 46 行.
+SQL: SELECT COUNT(*) AS tp_count FROM cs_business as a LEFT JOIN `cs_user` as b ON a.saleman_id=b.user_Id LEFT JOIN `cs_business_follow` as c ON a.follpw_Id=c.follpw_Id  LIMIT 1   [ RunTime:0.001001s ]
+NOTIC: [8] Undefined variable: where E:\www\zwt\Application\Home\Controller\BusinessController.class.php 第 50 行.
+SQL: SELECT a.busi_id,a.name,a.businame,a.nikename,a.business_id,a.phone,a.addtime,a.address,a.busi_level,a.busi_type,a.coop_id,a.saleman_id,b.username,b.real_name,c.status as visit_status,c.remarks FROM cs_business as a LEFT JOIN `cs_user` as b ON a.saleman_id=b.user_Id LEFT JOIN `cs_business_follow` as c ON a.follpw_Id=c.follpw_Id  ORDER BY a.addtime desc LIMIT 0,20   [ RunTime:0.001000s ]
+NOTIC: [2] Missing argument 1 for I(), called in E:\www\zwt\Application\Home\Controller\BusinessController.class.php on line 71 and defined E:\www\zwt\ThinkPHP\Common\functions.php 第 220 行.
+NOTIC: [8] Undefined variable: name E:\www\zwt\ThinkPHP\Common\functions.php 第 221 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 74 行.
+NOTIC: [8] Undefined index: business_id E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 103 行.
+NOTIC: [8] Undefined index: name E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 105 行.
+NOTIC: [8] Undefined index: businame E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 107 行.
+NOTIC: [8] Undefined index: phone E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 109 行.
+NOTIC: [8] Undefined index: nikename E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 111 行.
+NOTIC: [8] Undefined index: real_name E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 113 行.
+NOTIC: [8] Undefined index: username E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 115 行.
+NOTIC: [8] Undefined index: genjin E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 119 行.
+NOTIC: [8] Undefined index: genjin E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 119 行.
+NOTIC: [8] Undefined index: genjin E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 120 行.
+NOTIC: [8] Undefined index: genjin E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 121 行.
+NOTIC: [8] Undefined index: startTime E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 124 行.
+NOTIC: [8] Undefined index: endTime E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 125 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-10T15:30:11+08:00 ] ::1 /Public/font-awesome1/css/font-awesome.css
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+ERR: 无法加载控制器:Public
+
+[ 2017-08-10T16:44:28+08:00 ] 127.0.0.1 /Wxchat/product/get_param
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-10T18:08:25+08:00 ] ::1 /Home/Business/business_list
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM cs_userrole as a [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_userrole as a
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = 0 and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.134007s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '1' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.020001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '46' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.019001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '44' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.019002s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '41' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.019001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '24' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.020001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '21' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.020001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '29' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.019001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '36' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.021001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '27' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.019001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '63' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.022002s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '66' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.021001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '70' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.022001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '73' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.019001s ]
+NOTIC: [8] Undefined index: begin E:\www\zwt\ThinkPHP\Common\functions.php 第 90 行.
+SQL: SHOW COLUMNS FROM cs_business as a [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_business as a
+NOTIC: [8] Undefined variable: where E:\www\zwt\Application\Home\Controller\BusinessController.class.php 第 46 行.
+SQL: SELECT COUNT(*) AS tp_count FROM cs_business as a LEFT JOIN `cs_user` as b ON a.saleman_id=b.user_Id LEFT JOIN `cs_business_follow` as c ON a.follpw_Id=c.follpw_Id  LIMIT 1   [ RunTime:0.037002s ]
+NOTIC: [8] Undefined variable: where E:\www\zwt\Application\Home\Controller\BusinessController.class.php 第 50 行.
+SQL: SELECT a.busi_id,a.name,a.businame,a.nikename,a.business_id,a.phone,a.addtime,a.address,a.busi_level,a.busi_type,a.coop_id,a.saleman_id,b.username,b.real_name,c.status as visit_status,c.remarks FROM cs_business as a LEFT JOIN `cs_user` as b ON a.saleman_id=b.user_Id LEFT JOIN `cs_business_follow` as c ON a.follpw_Id=c.follpw_Id  ORDER BY a.addtime desc LIMIT 0,20   [ RunTime:0.020001s ]
+NOTIC: [2] Missing argument 1 for I(), called in E:\www\zwt\Application\Home\Controller\BusinessController.class.php on line 71 and defined E:\www\zwt\ThinkPHP\Common\functions.php 第 220 行.
+NOTIC: [8] Undefined variable: name E:\www\zwt\ThinkPHP\Common\functions.php 第 221 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 74 行.
+NOTIC: [8] Undefined index: business_id E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 103 行.
+NOTIC: [8] Undefined index: name E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 105 行.
+NOTIC: [8] Undefined index: businame E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 107 行.
+NOTIC: [8] Undefined index: phone E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 109 行.
+NOTIC: [8] Undefined index: nikename E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 111 行.
+NOTIC: [8] Undefined index: real_name E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 113 行.
+NOTIC: [8] Undefined index: username E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 115 行.
+NOTIC: [8] Undefined index: genjin E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 119 行.
+NOTIC: [8] Undefined index: genjin E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 119 行.
+NOTIC: [8] Undefined index: genjin E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 120 行.
+NOTIC: [8] Undefined index: genjin E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 121 行.
+NOTIC: [8] Undefined index: startTime E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 124 行.
+NOTIC: [8] Undefined index: endTime E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 125 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.112006s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.112006s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.014001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.014001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-10T18:08:26+08:00 ] ::1 /Public/font-awesome1/css/font-awesome.css
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+ERR: 无法加载控制器:Public
+
+[ 2017-08-10T18:08:29+08:00 ] ::1 /Public/font-awesome1/css/font-awesome.css
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Public
+
+[ 2017-08-10T18:09:50+08:00 ] ::1 /Home/Business/business_list
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM cs_userrole as a [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_userrole as a
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = 0 and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.021001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '1' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.019001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '46' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.019001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '44' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.021001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '41' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.018001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '24' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.019001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '21' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.019001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '29' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.021001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '36' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.020001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '27' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.018001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '63' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.019001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '66' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.021001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '70' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.020001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '73' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.019002s ]
+NOTIC: [8] Undefined index: begin E:\www\zwt\ThinkPHP\Common\functions.php 第 90 行.
+SQL: SHOW COLUMNS FROM cs_business as a [ RunTime:0.001000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_business as a
+NOTIC: [8] Undefined variable: where E:\www\zwt\Application\Home\Controller\BusinessController.class.php 第 46 行.
+SQL: SELECT COUNT(*) AS tp_count FROM cs_business as a LEFT JOIN `cs_user` as b ON a.saleman_id=b.user_Id LEFT JOIN `cs_business_follow` as c ON a.follpw_Id=c.follpw_Id  LIMIT 1   [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: where E:\www\zwt\Application\Home\Controller\BusinessController.class.php 第 50 行.
+SQL: SELECT a.busi_id,a.name,a.businame,a.nikename,a.business_id,a.phone,a.addtime,a.address,a.busi_level,a.busi_type,a.coop_id,a.saleman_id,b.username,b.real_name,c.status as visit_status,c.remarks FROM cs_business as a LEFT JOIN `cs_user` as b ON a.saleman_id=b.user_Id LEFT JOIN `cs_business_follow` as c ON a.follpw_Id=c.follpw_Id  ORDER BY a.addtime desc LIMIT 0,20   [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 1 for I(), called in E:\www\zwt\Application\Home\Controller\BusinessController.class.php on line 71 and defined E:\www\zwt\ThinkPHP\Common\functions.php 第 220 行.
+NOTIC: [8] Undefined variable: name E:\www\zwt\ThinkPHP\Common\functions.php 第 221 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 74 行.
+NOTIC: [8] Undefined index: business_id E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 103 行.
+NOTIC: [8] Undefined index: name E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 105 行.
+NOTIC: [8] Undefined index: businame E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 107 行.
+NOTIC: [8] Undefined index: phone E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 109 行.
+NOTIC: [8] Undefined index: nikename E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 111 行.
+NOTIC: [8] Undefined index: real_name E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 113 行.
+NOTIC: [8] Undefined index: username E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 115 行.
+NOTIC: [8] Undefined index: genjin E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 119 行.
+NOTIC: [8] Undefined index: genjin E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 119 行.
+NOTIC: [8] Undefined index: genjin E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 120 行.
+NOTIC: [8] Undefined index: genjin E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 121 行.
+NOTIC: [8] Undefined index: startTime E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 124 行.
+NOTIC: [8] Undefined index: endTime E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 125 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-10T18:09:50+08:00 ] ::1 /Public/font-awesome1/css/font-awesome.css
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Public
+
+[ 2017-08-10T18:13:30+08:00 ] ::1 /Home/Business/change_saleman
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM cs_userrole as a [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_userrole as a
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = 0 and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.019001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '1' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.020002s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '46' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.020001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '44' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.019001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '41' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.020001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '24' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.020001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '21' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.021002s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '29' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.020001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '36' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.020001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '27' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.020001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '63' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.019001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '66' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.021001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '70' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.019001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '73' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.022002s ]
+NOTIC: [8] Undefined index: begin E:\www\zwt\ThinkPHP\Common\functions.php 第 90 行.
+SQL: SHOW COLUMNS FROM cs_business as a [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_business as a
+NOTIC: [8] Undefined variable: where E:\www\zwt\Application\Home\Controller\BusinessController.class.php 第 711 行.
+SQL: SELECT `busi_id`,`business_id`,`coop_id`,`name`,`businame`,`phone`,`address`,`busi_type`,`busi_level`,`is_bind`,`status`,`username`,`real_name` FROM cs_business as a LEFT JOIN cs_user as b ON a.saleman_id=b.user_Id  ORDER BY a.addtime desc  [ RunTime:0.001000s ]
+NOTIC: [2] Missing argument 1 for I(), called in E:\www\zwt\Application\Home\Controller\BusinessController.class.php on line 729 and defined E:\www\zwt\ThinkPHP\Common\functions.php 第 220 行.
+NOTIC: [8] Undefined variable: name E:\www\zwt\ThinkPHP\Common\functions.php 第 221 行.
+SQL: SELECT c.user_Id,c.username,c.real_name,c.company_id FROM cs_userrole as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id LEFT JOIN `cs_user` as c ON a.user_Id=c.user_Id  WHERE ( b.role_position=3 and c.is_use=1 )  [ RunTime:0.033002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\77a56432b965f451019982e4977470cb.php 第 73 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\77a56432b965f451019982e4977470cb.php 第 73 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\77a56432b965f451019982e4977470cb.php 第 73 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\77a56432b965f451019982e4977470cb.php 第 73 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\77a56432b965f451019982e4977470cb.php 第 73 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\77a56432b965f451019982e4977470cb.php 第 73 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\77a56432b965f451019982e4977470cb.php 第 73 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\77a56432b965f451019982e4977470cb.php 第 73 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\77a56432b965f451019982e4977470cb.php 第 73 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\77a56432b965f451019982e4977470cb.php 第 73 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\77a56432b965f451019982e4977470cb.php 第 73 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\77a56432b965f451019982e4977470cb.php 第 73 行.
+NOTIC: [8] Undefined index: number E:\www\zwt\Application\Runtime\Cache\Home\77a56432b965f451019982e4977470cb.php 第 99 行.
+NOTIC: [8] Undefined index: business_id E:\www\zwt\Application\Runtime\Cache\Home\77a56432b965f451019982e4977470cb.php 第 103 行.
+NOTIC: [8] Undefined variable: status E:\www\zwt\Application\Runtime\Cache\Home\77a56432b965f451019982e4977470cb.php 第 108 行.
+NOTIC: [8] Undefined variable: status E:\www\zwt\Application\Runtime\Cache\Home\77a56432b965f451019982e4977470cb.php 第 109 行.
+NOTIC: [8] Undefined variable: status E:\www\zwt\Application\Runtime\Cache\Home\77a56432b965f451019982e4977470cb.php 第 110 行.
+NOTIC: [8] Undefined variable: user_info E:\www\zwt\Application\Runtime\Cache\Home\77a56432b965f451019982e4977470cb.php 第 116 行.
+NOTIC: [8] Undefined variable: show E:\www\zwt\Application\Runtime\Cache\Home\77a56432b965f451019982e4977470cb.php 第 179 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.049003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-10T18:13:30+08:00 ] ::1 /Public/font-awesome1/css/font-awesome.css
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+ERR: 无法加载控制器:Public
+
+[ 2017-08-10T18:13:30+08:00 ] ::1 /Public/js/excanvas.min.js
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Public
+
+[ 2017-08-10T18:13:31+08:00 ] ::1 /Home/Business/business_list
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM cs_userrole as a [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_userrole as a
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = 0 and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.019001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '1' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.019001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '46' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.020001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '44' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.022001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '41' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.021001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '24' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.020001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '21' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.020002s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '29' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.022001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '36' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.019001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '27' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.020001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '63' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.018001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '66' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.020001s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '70' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.022002s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '73' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.020001s ]
+NOTIC: [8] Undefined index: begin E:\www\zwt\ThinkPHP\Common\functions.php 第 90 行.
+SQL: SHOW COLUMNS FROM cs_business as a [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_business as a
+NOTIC: [8] Undefined variable: where E:\www\zwt\Application\Home\Controller\BusinessController.class.php 第 46 行.
+SQL: SELECT COUNT(*) AS tp_count FROM cs_business as a LEFT JOIN `cs_user` as b ON a.saleman_id=b.user_Id LEFT JOIN `cs_business_follow` as c ON a.follpw_Id=c.follpw_Id  LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: where E:\www\zwt\Application\Home\Controller\BusinessController.class.php 第 50 行.
+SQL: SELECT a.busi_id,a.name,a.businame,a.nikename,a.business_id,a.phone,a.addtime,a.address,a.busi_level,a.busi_type,a.coop_id,a.saleman_id,b.username,b.real_name,c.status as visit_status,c.remarks FROM cs_business as a LEFT JOIN `cs_user` as b ON a.saleman_id=b.user_Id LEFT JOIN `cs_business_follow` as c ON a.follpw_Id=c.follpw_Id  ORDER BY a.addtime desc LIMIT 0,20   [ RunTime:0.000000s ]
+NOTIC: [2] Missing argument 1 for I(), called in E:\www\zwt\Application\Home\Controller\BusinessController.class.php on line 71 and defined E:\www\zwt\ThinkPHP\Common\functions.php 第 220 行.
+NOTIC: [8] Undefined variable: name E:\www\zwt\ThinkPHP\Common\functions.php 第 221 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 74 行.
+NOTIC: [8] Undefined index: key E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 74 行.
+NOTIC: [8] Undefined index: business_id E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 103 行.
+NOTIC: [8] Undefined index: name E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 105 行.
+NOTIC: [8] Undefined index: businame E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 107 行.
+NOTIC: [8] Undefined index: phone E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 109 行.
+NOTIC: [8] Undefined index: nikename E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 111 行.
+NOTIC: [8] Undefined index: real_name E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 113 行.
+NOTIC: [8] Undefined index: username E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 115 行.
+NOTIC: [8] Undefined index: genjin E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 119 行.
+NOTIC: [8] Undefined index: genjin E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 119 行.
+NOTIC: [8] Undefined index: genjin E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 120 行.
+NOTIC: [8] Undefined index: genjin E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 121 行.
+NOTIC: [8] Undefined index: startTime E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 124 行.
+NOTIC: [8] Undefined index: endTime E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 125 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+NOTIC: [8] Undefined index: is_bind E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 189 行.
+NOTIC: [8] Undefined index: status E:\www\zwt\Application\Runtime\Cache\Home\073f15f9350c30c30b2214c2485fd9c9.php 第 191 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-08-10T18:13:31+08:00 ] ::1 /Public/font-awesome1/css/font-awesome.css
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+ERR: 无法加载控制器:Public
+

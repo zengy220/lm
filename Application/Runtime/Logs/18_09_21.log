@@ -1,0 +1,174 @@
+[ 2018-09-21T16:54:37+08:00 ] 192.168.0.43 /
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001595s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004625s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `cs_content_category` [ RunTime:0.008445s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = 0 ) AND ( `status` = 1 ) ORDER BY sort asc  [ RunTime:0.000768s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 1 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000229s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 2 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000221s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 3 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000219s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 5 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000184s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = '' ) LIMIT 1   [ RunTime:0.000225s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = '' ) LIMIT 1   [ RunTime:0.000214s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `status` = 1 ) AND ( `pid` = null ) ORDER BY sort asc  [ RunTime:0.000245s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = '' ) LIMIT 1   [ RunTime:0.000231s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = null ) AND ( `status` = 1 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000226s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( tpcode='' and pid=0 ) LIMIT 1   [ RunTime:0.000219s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( id='' ) LIMIT 1   [ RunTime:0.000275s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = null ) LIMIT 1   [ RunTime:0.000202s ]
+SQL: SHOW COLUMNS FROM cs_ad_list t1 [ RunTime:0.000160s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't1' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_ad_list t1
+SQL: SELECT t2.img,t1.id,t2.title,t2.url FROM cs_ad_list t1 left JOIN cs_ad_content t2 on t1.id = t2.ad_list_id  WHERE ( t1.simple_code='' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.011421s ]
+SQL: SHOW COLUMNS FROM cs_content_content as t1 [ RunTime:0.000268s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as t1' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_content_content as t1
+SQL: SELECT t1.contents FROM cs_content_content as t1 INNER JOIN cs_content_category as t2 on t1.col_id=t2.id  WHERE ( t2.tpcode='QYWH' and t1.status=1 ) ORDER BY istop desc,t1.create_time desc,update_time desc LIMIT 1   [ RunTime:0.003814s ]
+SQL: SHOW COLUMNS FROM `cs_pro` [ RunTime:0.007184s ]
+SQL: SELECT `id`,`thumb`,`names`,`description` FROM `cs_pro` WHERE ( `sort2` IN (0,2) ) ORDER BY sort asc  [ RunTime:0.000646s ]
+SQL: SELECT `id` FROM `cs_content_category` WHERE ( tpcode='ZXZX' ) LIMIT 1   [ RunTime:0.000243s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `status` = 1 ) AND ( `pid` = 3 ) ORDER BY sort asc LIMIT 3   [ RunTime:0.000925s ]
+SQL: SHOW COLUMNS FROM `cs_content_content` [ RunTime:0.005557s ]
+SQL: SELECT * FROM `cs_content_content` WHERE ( col_id = 10 and status=1 ) ORDER BY istop desc,create_time desc,update_time desc LIMIT 6   [ RunTime:0.000313s ]
+SQL: SELECT * FROM `cs_content_content` WHERE ( col_id = 26 and status=1 ) ORDER BY istop desc,create_time desc,update_time desc LIMIT 6   [ RunTime:0.000226s ]
+SQL: SELECT * FROM `cs_content_content` WHERE ( col_id = 27 and status=1 ) ORDER BY istop desc,create_time desc,update_time desc LIMIT 6   [ RunTime:0.000232s ]
+SQL: SHOW COLUMNS FROM cs_ad_content as t1 [ RunTime:0.000149s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as t1' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_ad_content as t1
+SQL: SELECT t1.img,t1.url FROM cs_ad_content as t1 INNER JOIN cs_ad_list as t2 on t1.ad_list_id=t2.id  WHERE ( t2.simple_code='SYGG' )  [ RunTime:0.000578s ]
+SQL: SELECT t2.img,t1.id,t2.title,t2.url FROM cs_ad_list t1 left JOIN cs_ad_content t2 on t1.id = t2.ad_list_id  WHERE ( t1.simple_code='SYZXGG' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.003544s ]
+SQL: SELECT t1.contents,t1.title,t1.thumb FROM cs_content_content as t1 INNER JOIN cs_content_category as t2 on t1.col_id=t2.id  WHERE ( t2.tpcode='BLZY' and t1.status=1 ) ORDER BY istop desc,t1.create_time desc,update_time desc LIMIT 3   [ RunTime:0.000368s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000041s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000080s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.025525s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025568s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001008s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001038s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001173s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001205s ]
+
+[ 2018-09-21T16:54:43+08:00 ] 192.168.0.43 /home
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000764s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001387s ]
+
+[ 2018-09-21T16:54:44+08:00 ] 192.168.0.43 /Home/User/
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000477s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000876s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM cs_userrole as a [ RunTime:0.000656s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as a' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_userrole as a
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = 0 and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.026474s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '1' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.012541s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '46' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.012772s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '44' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.012727s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '41' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.012975s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '24' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.012685s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '21' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.012914s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '29' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.012753s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '36' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.012981s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '27' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.012969s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '63' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.012866s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '66' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.012964s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '70' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.012696s ]
+SQL: SELECT menu_Id,menu_name,menu_url,relation_Id FROM `cs_menu` where menu_Id IN (SELECT distinct menu_Id FROM `cs_rolemenu` as a LEFT JOIN `cs_role` as b ON a.role_Id=b.role_Id where a.role_Id IN (SELECT role_Id FROM `cs_userrole` where (`user_Id` = '6' and b.`role_status` = 1 and `menu_status` = 1 and `relation_Id` = '73' and `menu_show` = 1) )) order by menu_sort asc [ RunTime:0.012579s ]
+NOTIC: [8] Undefined index: begin C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Common\functions.php 第 90 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000034s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000090s ]
+NOTIC: [8] Undefined index: key C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 80 行.
+NOTIC: [8] Undefined index: key C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 80 行.
+NOTIC: [8] Undefined index: key C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 80 行.
+NOTIC: [8] Undefined index: key C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 80 行.
+NOTIC: [8] Undefined index: key C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 80 行.
+NOTIC: [8] Undefined index: key C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 80 行.
+NOTIC: [8] Undefined index: key C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 80 行.
+NOTIC: [8] Undefined index: key C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 80 行.
+NOTIC: [8] Undefined index: key C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 80 行.
+NOTIC: [8] Undefined index: key C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 80 行.
+NOTIC: [8] Undefined index: key C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 80 行.
+NOTIC: [8] Undefined index: key C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 80 行.
+NOTIC: [8] Undefined index: key C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Home\6830cbac89ff06451c77cd8769d6d4ca.php 第 80 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.015310s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015419s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000512s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000544s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000609s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000642s ]
+
+[ 2018-09-21T17:11:36+08:00 ] 192.168.0.43 /
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000631s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001087s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `cs_content_category` [ RunTime:0.015531s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = 0 ) AND ( `status` = 1 ) ORDER BY sort asc  [ RunTime:0.000637s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 1 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000404s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 2 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000340s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 3 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000329s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 5 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000342s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = '' ) LIMIT 1   [ RunTime:0.000366s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = '' ) LIMIT 1   [ RunTime:0.000372s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `status` = 1 ) AND ( `pid` = null ) ORDER BY sort asc  [ RunTime:0.000373s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = '' ) LIMIT 1   [ RunTime:0.000371s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = null ) AND ( `status` = 1 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000382s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( tpcode='' and pid=0 ) LIMIT 1   [ RunTime:0.000367s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( id='' ) LIMIT 1   [ RunTime:0.000317s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = null ) LIMIT 1   [ RunTime:0.000282s ]
+SQL: SHOW COLUMNS FROM cs_ad_list t1 [ RunTime:0.000213s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't1' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_ad_list t1
+SQL: SELECT t2.img,t1.id,t2.title,t2.url FROM cs_ad_list t1 left JOIN cs_ad_content t2 on t1.id = t2.ad_list_id  WHERE ( t1.simple_code='' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.007483s ]
+SQL: SHOW COLUMNS FROM cs_content_content as t1 [ RunTime:0.000265s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as t1' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_content_content as t1
+SQL: SELECT t1.contents FROM cs_content_content as t1 INNER JOIN cs_content_category as t2 on t1.col_id=t2.id  WHERE ( t2.tpcode='QYWH' and t1.status=1 ) ORDER BY istop desc,t1.create_time desc,update_time desc LIMIT 1   [ RunTime:0.001854s ]
+SQL: SHOW COLUMNS FROM `cs_pro` [ RunTime:0.005609s ]
+SQL: SELECT `id`,`thumb`,`names`,`description` FROM `cs_pro` WHERE ( `sort2` IN (0,2) ) ORDER BY sort asc  [ RunTime:0.000317s ]
+SQL: SELECT `id` FROM `cs_content_category` WHERE ( tpcode='ZXZX' ) LIMIT 1   [ RunTime:0.000223s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `status` = 1 ) AND ( `pid` = 3 ) ORDER BY sort asc LIMIT 3   [ RunTime:0.000261s ]
+SQL: SHOW COLUMNS FROM `cs_content_content` [ RunTime:0.003903s ]
+SQL: SELECT * FROM `cs_content_content` WHERE ( col_id = 10 and status=1 ) ORDER BY istop desc,create_time desc,update_time desc LIMIT 6   [ RunTime:0.000332s ]
+SQL: SELECT * FROM `cs_content_content` WHERE ( col_id = 26 and status=1 ) ORDER BY istop desc,create_time desc,update_time desc LIMIT 6   [ RunTime:0.000247s ]
+SQL: SELECT * FROM `cs_content_content` WHERE ( col_id = 27 and status=1 ) ORDER BY istop desc,create_time desc,update_time desc LIMIT 6   [ RunTime:0.000245s ]
+SQL: SHOW COLUMNS FROM cs_ad_content as t1 [ RunTime:0.000175s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as t1' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_ad_content as t1
+SQL: SELECT t1.img,t1.url FROM cs_ad_content as t1 INNER JOIN cs_ad_list as t2 on t1.ad_list_id=t2.id  WHERE ( t2.simple_code='SYGG' )  [ RunTime:0.000301s ]
+SQL: SELECT t2.img,t1.id,t2.title,t2.url FROM cs_ad_list t1 left JOIN cs_ad_content t2 on t1.id = t2.ad_list_id  WHERE ( t1.simple_code='SYZXGG' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.003976s ]
+SQL: SELECT t1.contents,t1.title,t1.thumb FROM cs_content_content as t1 INNER JOIN cs_content_category as t2 on t1.col_id=t2.id  WHERE ( t2.tpcode='BLZY' and t1.status=1 ) ORDER BY istop desc,t1.create_time desc,update_time desc LIMIT 3   [ RunTime:0.000501s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000071s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.011136s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011176s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000485s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000516s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000740s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000781s ]
+
+[ 2018-09-21T17:11:36+08:00 ] 192.168.0.43 /header.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000631s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001085s ]
+ERR: 无法加载控制器:Header
+
+[ 2018-09-21T17:11:36+08:00 ] 192.168.0.43 /footer.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001108s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001679s ]
+ERR: 无法加载控制器:Footer
+

@@ -1,0 +1,142 @@
+[ 2017-07-24T19:09:20+08:00 ] 192.168.1.60 /
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.013001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.025002s ]
+SQL: SHOW COLUMNS FROM `cs_content_category` [ RunTime:0.837048s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = 0 ) AND ( `status` = 1 ) ORDER BY sort asc  [ RunTime:0.010001s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 1 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 2 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 3 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 5 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = '' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = '' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `status` = 1 ) AND ( `pid` = null ) ORDER BY sort asc  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = '' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = null ) AND ( `status` = 1 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( tpcode='' and pid=0 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( id='' ) LIMIT 1   [ RunTime:0.047003s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = null ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM cs_ad_list t1 [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't1' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_ad_list t1
+SQL: SELECT t2.img,t1.id,t2.title,t2.url FROM cs_ad_list t1 left JOIN cs_ad_content t2 on t1.id = t2.ad_list_id  WHERE ( t1.simple_code='' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.073004s ]
+SQL: SHOW COLUMNS FROM cs_content_content as t1 [ RunTime:0.001000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as t1' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_content_content as t1
+SQL: SELECT t1.contents FROM cs_content_content as t1 INNER JOIN cs_content_category as t2 on t1.col_id=t2.id  WHERE ( t2.tpcode='QYWH' and t1.status=1 ) ORDER BY istop desc,t1.create_time desc,update_time desc LIMIT 1   [ RunTime:0.059004s ]
+SQL: SHOW COLUMNS FROM `cs_pro` [ RunTime:0.035002s ]
+SQL: SELECT `id`,`thumb`,`names`,`description` FROM `cs_pro` WHERE ( `sort2` IN (0,2) ) ORDER BY sort asc  [ RunTime:0.022001s ]
+SQL: SELECT `id` FROM `cs_content_category` WHERE ( tpcode='ZXZX' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `status` = 1 ) AND ( `pid` = 3 ) ORDER BY sort asc LIMIT 3   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `cs_content_content` [ RunTime:0.006000s ]
+SQL: SELECT * FROM `cs_content_content` WHERE ( col_id = 10 and status=1 ) ORDER BY istop desc,create_time desc,update_time desc LIMIT 6   [ RunTime:0.015001s ]
+SQL: SELECT * FROM `cs_content_content` WHERE ( col_id = 26 and status=1 ) ORDER BY istop desc,create_time desc,update_time desc LIMIT 6   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `cs_content_content` WHERE ( col_id = 27 and status=1 ) ORDER BY istop desc,create_time desc,update_time desc LIMIT 6   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM cs_ad_content as t1 [ RunTime:0.001001s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'as t1' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_ad_content as t1
+SQL: SELECT t1.img,t1.url FROM cs_ad_content as t1 INNER JOIN cs_ad_list as t2 on t1.ad_list_id=t2.id  WHERE ( t2.simple_code='SYGG' )  [ RunTime:0.010000s ]
+SQL: SELECT t2.img,t1.id,t2.title,t2.url FROM cs_ad_list t1 left JOIN cs_ad_content t2 on t1.id = t2.ad_list_id  WHERE ( t1.simple_code='SYZXGG' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.007000s ]
+SQL: SELECT t1.contents,t1.title,t1.thumb FROM cs_content_content as t1 INNER JOIN cs_content_category as t2 on t1.col_id=t2.id  WHERE ( t2.tpcode='BLZY' and t1.status=1 ) ORDER BY istop desc,t1.create_time desc,update_time desc LIMIT 3   [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.088005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.088005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.027002s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.027002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.059003s ]
+INFO: [ app_end ] --END-- [ RunTime:0.059003s ]
+
+[ 2017-07-24T19:09:21+08:00 ] 192.168.1.60 /header.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+ERR: 无法加载控制器:Header
+
+[ 2017-07-24T19:09:21+08:00 ] 192.168.1.60 /footer.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Footer
+
+[ 2017-07-24T19:12:16+08:00 ] 192.168.1.60 /Wxchat/Product/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-07-24T19:12:27+08:00 ] 192.168.1.60 /Wxchat/Product/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-24T19:41:12+08:00 ] 192.168.1.60 /wxchat/Product/get_param
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-24T19:50:25+08:00 ] 192.168.1.60 /wxchat/Product/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-24T19:55:54+08:00 ] 192.168.1.60 /wxchat/Product/get_param
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-07-24T19:58:27+08:00 ] 192.168.1.60 /wxchat/Product/get_param
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-24T20:01:01+08:00 ] 192.168.1.60 //Wxchat/Product/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-24T20:30:36+08:00 ] 192.168.1.60 /wxchat/Product/get_param
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-07-24T20:30:41+08:00 ] 192.168.1.60 /wxchat/Product/get_param
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-24T20:31:25+08:00 ] 192.168.1.60 //Wxchat/Product/index
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

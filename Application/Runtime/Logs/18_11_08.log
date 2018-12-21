@@ -1,0 +1,1718 @@
+[ 2018-11-08T15:17:12+08:00 ] 192.168.0.43 /web/map/index/ptpcode/LMCY
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.003476s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006323s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `cs_content_category` [ RunTime:0.051153s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = 0 ) AND ( `status` = 1 ) ORDER BY sort asc  [ RunTime:0.003835s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 41 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.001351s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 46 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000959s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 52 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000797s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'LMCY' ) LIMIT 1   [ RunTime:0.001062s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'LMCY' ) LIMIT 1   [ RunTime:0.000943s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `status` = 1 ) AND ( `pid` = 41 ) ORDER BY sort asc  [ RunTime:0.003037s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'LMCY' ) LIMIT 1   [ RunTime:0.001044s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = 41 ) AND ( `status` = 1 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000869s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( tpcode='LMCY' and pid=0 ) LIMIT 1   [ RunTime:0.000785s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( id='42' ) LIMIT 1   [ RunTime:0.002553s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 42 ) LIMIT 1   [ RunTime:0.000848s ]
+SQL: SHOW COLUMNS FROM cs_ad_list t1 [ RunTime:0.001093s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't1' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_ad_list t1
+SQL: SELECT t2.img,t1.id,t2.title,t2.url FROM cs_ad_list t1 left JOIN cs_ad_content t2 on t1.id = t2.ad_list_id  WHERE ( t1.simple_code='LMCY' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.019123s ]
+SQL: SHOW COLUMNS FROM `cs_content_content` [ RunTime:0.033135s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cs_content_content` WHERE ( `col_id` = 42 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.001415s ]
+SQL: SELECT * FROM `cs_content_content` WHERE ( `col_id` = 42 ) AND ( `status` = 1 ) ORDER BY istop desc,create_time desc,update_time desc LIMIT 0,10   [ RunTime:0.004884s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 32 ) LIMIT 1   [ RunTime:0.000540s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000403s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000579s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.083899s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.084074s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.003976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004119s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.003867s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003986s ]
+
+[ 2018-11-08T15:17:17+08:00 ] 192.168.0.43 /web/about/page_content/id/42/ptpcode/LMCY
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.003561s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005842s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `cs_content_category` [ RunTime:0.025576s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = 0 ) AND ( `status` = 1 ) ORDER BY sort asc  [ RunTime:0.000952s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 41 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000734s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 46 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000695s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 52 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000761s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'LMCY' ) LIMIT 1   [ RunTime:0.000816s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'LMCY' ) LIMIT 1   [ RunTime:0.000764s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `status` = 1 ) AND ( `pid` = 41 ) ORDER BY sort asc  [ RunTime:0.001036s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( tpcode='LMCY' and pid=0 ) LIMIT 1   [ RunTime:0.000870s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( id='42' ) LIMIT 1   [ RunTime:0.000835s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 42 ) LIMIT 1   [ RunTime:0.001082s ]
+SQL: SHOW COLUMNS FROM cs_ad_list t1 [ RunTime:0.000510s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't1' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_ad_list t1
+SQL: SELECT t2.img,t1.id,t2.title,t2.url FROM cs_ad_list t1 left JOIN cs_ad_content t2 on t1.id = t2.ad_list_id  WHERE ( t1.simple_code='LMCY' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000785s ]
+SQL: SHOW COLUMNS FROM `cs_content_content` [ RunTime:0.022980s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cs_content_content` WHERE ( `col_id` = 42 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000703s ]
+SQL: SELECT * FROM `cs_content_content` WHERE ( `col_id` = 42 ) AND ( `status` = 1 ) ORDER BY istop desc,create_time desc,update_time desc LIMIT 0,10   [ RunTime:0.001696s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 42 ) LIMIT 1   [ RunTime:0.000821s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000118s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000229s ]
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\3776fe2913663d859f52be2bfec5ab5a.php 第 167 行.
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\3776fe2913663d859f52be2bfec5ab5a.php 第 168 行.
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\3776fe2913663d859f52be2bfec5ab5a.php 第 169 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.037801s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037957s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.003272s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003425s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.004058s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004264s ]
+
+[ 2018-11-08T15:17:18+08:00 ] 192.168.0.43 /web/about/page_content/id/42/ptpcode/header.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002670s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004568s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `cs_content_category` [ RunTime:0.025678s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = 0 ) AND ( `status` = 1 ) ORDER BY sort asc  [ RunTime:0.001115s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 41 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000711s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 46 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000633s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 52 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000702s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'header' ) LIMIT 1   [ RunTime:0.000656s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'header' ) LIMIT 1   [ RunTime:0.000636s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `status` = 1 ) AND ( `pid` = null ) ORDER BY sort asc  [ RunTime:0.000682s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( tpcode='header' and pid=0 ) LIMIT 1   [ RunTime:0.000863s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( id='42' ) LIMIT 1   [ RunTime:0.000939s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 42 ) LIMIT 1   [ RunTime:0.001169s ]
+SQL: SHOW COLUMNS FROM cs_ad_list t1 [ RunTime:0.001169s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't1' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_ad_list t1
+SQL: SELECT t2.img,t1.id,t2.title,t2.url FROM cs_ad_list t1 left JOIN cs_ad_content t2 on t1.id = t2.ad_list_id  WHERE ( t1.simple_code='header' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.001051s ]
+SQL: SHOW COLUMNS FROM `cs_content_content` [ RunTime:0.027062s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cs_content_content` WHERE ( `col_id` = 42 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.002023s ]
+SQL: SELECT * FROM `cs_content_content` WHERE ( `col_id` = 42 ) AND ( `status` = 1 ) ORDER BY istop desc,create_time desc,update_time desc LIMIT 0,10   [ RunTime:0.001688s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 42 ) LIMIT 1   [ RunTime:0.000819s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000179s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000323s ]
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\3776fe2913663d859f52be2bfec5ab5a.php 第 167 行.
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\3776fe2913663d859f52be2bfec5ab5a.php 第 168 行.
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\3776fe2913663d859f52be2bfec5ab5a.php 第 169 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.048346s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048516s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.002946s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003077s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.005224s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005398s ]
+
+[ 2018-11-08T15:17:20+08:00 ] 192.168.0.43 /web/about/page_content/id/42/ptpcode/footer.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002770s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005235s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `cs_content_category` [ RunTime:0.023463s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = 0 ) AND ( `status` = 1 ) ORDER BY sort asc  [ RunTime:0.001050s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 41 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000746s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 46 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000861s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 52 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000856s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'footer' ) LIMIT 1   [ RunTime:0.000755s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'footer' ) LIMIT 1   [ RunTime:0.000729s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `status` = 1 ) AND ( `pid` = null ) ORDER BY sort asc  [ RunTime:0.000941s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( tpcode='footer' and pid=0 ) LIMIT 1   [ RunTime:0.001928s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( id='42' ) LIMIT 1   [ RunTime:0.001385s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 42 ) LIMIT 1   [ RunTime:0.000918s ]
+SQL: SHOW COLUMNS FROM cs_ad_list t1 [ RunTime:0.000468s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't1' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_ad_list t1
+SQL: SELECT t2.img,t1.id,t2.title,t2.url FROM cs_ad_list t1 left JOIN cs_ad_content t2 on t1.id = t2.ad_list_id  WHERE ( t1.simple_code='footer' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000733s ]
+SQL: SHOW COLUMNS FROM `cs_content_content` [ RunTime:0.025758s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cs_content_content` WHERE ( `col_id` = 42 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000644s ]
+SQL: SELECT * FROM `cs_content_content` WHERE ( `col_id` = 42 ) AND ( `status` = 1 ) ORDER BY istop desc,create_time desc,update_time desc LIMIT 0,10   [ RunTime:0.001392s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 42 ) LIMIT 1   [ RunTime:0.001070s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000176s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000301s ]
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\3776fe2913663d859f52be2bfec5ab5a.php 第 167 行.
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\3776fe2913663d859f52be2bfec5ab5a.php 第 168 行.
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\3776fe2913663d859f52be2bfec5ab5a.php 第 169 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.047639s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047810s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.002840s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002970s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.003659s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003850s ]
+
+[ 2018-11-08T15:17:23+08:00 ] 192.168.0.43 /web/map/index/ptpcode/LMCY
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002908s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004956s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `cs_content_category` [ RunTime:0.022915s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = 0 ) AND ( `status` = 1 ) ORDER BY sort asc  [ RunTime:0.001324s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 41 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000688s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 46 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000696s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 52 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000661s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'LMCY' ) LIMIT 1   [ RunTime:0.000795s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'LMCY' ) LIMIT 1   [ RunTime:0.000864s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `status` = 1 ) AND ( `pid` = 41 ) ORDER BY sort asc  [ RunTime:0.001154s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'LMCY' ) LIMIT 1   [ RunTime:0.000794s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = 41 ) AND ( `status` = 1 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000949s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( tpcode='LMCY' and pid=0 ) LIMIT 1   [ RunTime:0.000806s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( id='42' ) LIMIT 1   [ RunTime:0.000773s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 42 ) LIMIT 1   [ RunTime:0.000822s ]
+SQL: SHOW COLUMNS FROM cs_ad_list t1 [ RunTime:0.000539s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't1' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_ad_list t1
+SQL: SELECT t2.img,t1.id,t2.title,t2.url FROM cs_ad_list t1 left JOIN cs_ad_content t2 on t1.id = t2.ad_list_id  WHERE ( t1.simple_code='LMCY' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000774s ]
+SQL: SHOW COLUMNS FROM `cs_content_content` [ RunTime:0.026220s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cs_content_content` WHERE ( `col_id` = 42 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000769s ]
+SQL: SELECT * FROM `cs_content_content` WHERE ( `col_id` = 42 ) AND ( `status` = 1 ) ORDER BY istop desc,create_time desc,update_time desc LIMIT 0,10   [ RunTime:0.001656s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 32 ) LIMIT 1   [ RunTime:0.000730s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000265s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000390s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.038730s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038862s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.002483s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002579s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.004430s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004607s ]
+
+[ 2018-11-08T15:17:29+08:00 ] 192.168.0.43 /web/about/page_content/id/42/ptpcode/LMCY
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002540s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004411s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `cs_content_category` [ RunTime:0.021127s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = 0 ) AND ( `status` = 1 ) ORDER BY sort asc  [ RunTime:0.000969s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 41 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000693s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 46 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000687s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 52 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000671s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'LMCY' ) LIMIT 1   [ RunTime:0.000707s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'LMCY' ) LIMIT 1   [ RunTime:0.000712s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `status` = 1 ) AND ( `pid` = 41 ) ORDER BY sort asc  [ RunTime:0.000818s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( tpcode='LMCY' and pid=0 ) LIMIT 1   [ RunTime:0.000694s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( id='42' ) LIMIT 1   [ RunTime:0.000773s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 42 ) LIMIT 1   [ RunTime:0.000744s ]
+SQL: SHOW COLUMNS FROM cs_ad_list t1 [ RunTime:0.000513s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't1' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_ad_list t1
+SQL: SELECT t2.img,t1.id,t2.title,t2.url FROM cs_ad_list t1 left JOIN cs_ad_content t2 on t1.id = t2.ad_list_id  WHERE ( t1.simple_code='LMCY' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000695s ]
+SQL: SHOW COLUMNS FROM `cs_content_content` [ RunTime:0.020797s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cs_content_content` WHERE ( `col_id` = 42 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000790s ]
+SQL: SELECT * FROM `cs_content_content` WHERE ( `col_id` = 42 ) AND ( `status` = 1 ) ORDER BY istop desc,create_time desc,update_time desc LIMIT 0,10   [ RunTime:0.001405s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 42 ) LIMIT 1   [ RunTime:0.000562s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000120s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000255s ]
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\3776fe2913663d859f52be2bfec5ab5a.php 第 167 行.
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\3776fe2913663d859f52be2bfec5ab5a.php 第 168 行.
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\3776fe2913663d859f52be2bfec5ab5a.php 第 169 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.033206s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033371s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.002985s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003133s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.003372s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003525s ]
+
+[ 2018-11-08T15:17:31+08:00 ] 192.168.0.43 /web/about/page_content/id/42/ptpcode/header.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002539s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004581s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `cs_content_category` [ RunTime:0.024079s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = 0 ) AND ( `status` = 1 ) ORDER BY sort asc  [ RunTime:0.001624s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 41 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000783s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 46 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000773s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 52 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000722s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'header' ) LIMIT 1   [ RunTime:0.000833s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'header' ) LIMIT 1   [ RunTime:0.000755s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `status` = 1 ) AND ( `pid` = null ) ORDER BY sort asc  [ RunTime:0.000960s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( tpcode='header' and pid=0 ) LIMIT 1   [ RunTime:0.000794s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( id='42' ) LIMIT 1   [ RunTime:0.000753s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 42 ) LIMIT 1   [ RunTime:0.000759s ]
+SQL: SHOW COLUMNS FROM cs_ad_list t1 [ RunTime:0.000511s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't1' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_ad_list t1
+SQL: SELECT t2.img,t1.id,t2.title,t2.url FROM cs_ad_list t1 left JOIN cs_ad_content t2 on t1.id = t2.ad_list_id  WHERE ( t1.simple_code='header' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000765s ]
+SQL: SHOW COLUMNS FROM `cs_content_content` [ RunTime:0.024692s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cs_content_content` WHERE ( `col_id` = 42 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000808s ]
+SQL: SELECT * FROM `cs_content_content` WHERE ( `col_id` = 42 ) AND ( `status` = 1 ) ORDER BY istop desc,create_time desc,update_time desc LIMIT 0,10   [ RunTime:0.001234s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 42 ) LIMIT 1   [ RunTime:0.000652s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000187s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000364s ]
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\3776fe2913663d859f52be2bfec5ab5a.php 第 167 行.
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\3776fe2913663d859f52be2bfec5ab5a.php 第 168 行.
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\3776fe2913663d859f52be2bfec5ab5a.php 第 169 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.042401s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042506s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.002341s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002425s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.003064s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003159s ]
+
+[ 2018-11-08T15:17:32+08:00 ] 192.168.0.43 /web/about/page_content/id/42/ptpcode/footer.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.004579s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008515s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `cs_content_category` [ RunTime:0.026512s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = 0 ) AND ( `status` = 1 ) ORDER BY sort asc  [ RunTime:0.000937s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 41 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000693s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 46 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000678s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 52 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000693s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'footer' ) LIMIT 1   [ RunTime:0.001685s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'footer' ) LIMIT 1   [ RunTime:0.000844s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `status` = 1 ) AND ( `pid` = null ) ORDER BY sort asc  [ RunTime:0.000884s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( tpcode='footer' and pid=0 ) LIMIT 1   [ RunTime:0.002131s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( id='42' ) LIMIT 1   [ RunTime:0.008499s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 42 ) LIMIT 1   [ RunTime:0.000868s ]
+SQL: SHOW COLUMNS FROM cs_ad_list t1 [ RunTime:0.000538s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't1' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_ad_list t1
+SQL: SELECT t2.img,t1.id,t2.title,t2.url FROM cs_ad_list t1 left JOIN cs_ad_content t2 on t1.id = t2.ad_list_id  WHERE ( t1.simple_code='footer' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000812s ]
+SQL: SHOW COLUMNS FROM `cs_content_content` [ RunTime:0.026930s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cs_content_content` WHERE ( `col_id` = 42 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000704s ]
+SQL: SELECT * FROM `cs_content_content` WHERE ( `col_id` = 42 ) AND ( `status` = 1 ) ORDER BY istop desc,create_time desc,update_time desc LIMIT 0,10   [ RunTime:0.001343s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 42 ) LIMIT 1   [ RunTime:0.000767s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000204s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000458s ]
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\3776fe2913663d859f52be2bfec5ab5a.php 第 167 行.
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\3776fe2913663d859f52be2bfec5ab5a.php 第 168 行.
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\3776fe2913663d859f52be2bfec5ab5a.php 第 169 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.058097s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058336s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.003665s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003845s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.004886s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005216s ]
+
+[ 2018-11-08T15:24:07+08:00 ] 192.168.0.43 /web/map/index/ptpcode/LMCY
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.004008s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007740s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `cs_content_category` [ RunTime:0.024230s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = 0 ) AND ( `status` = 1 ) ORDER BY sort asc  [ RunTime:0.000932s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 41 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000648s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 46 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000638s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 52 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000712s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'LMCY' ) LIMIT 1   [ RunTime:0.000741s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'LMCY' ) LIMIT 1   [ RunTime:0.000745s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `status` = 1 ) AND ( `pid` = 41 ) ORDER BY sort asc  [ RunTime:0.000880s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'LMCY' ) LIMIT 1   [ RunTime:0.000804s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = 41 ) AND ( `status` = 1 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.001665s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( tpcode='LMCY' and pid=0 ) LIMIT 1   [ RunTime:0.000823s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( id='42' ) LIMIT 1   [ RunTime:0.000826s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 42 ) LIMIT 1   [ RunTime:0.000803s ]
+SQL: SHOW COLUMNS FROM cs_ad_list t1 [ RunTime:0.000555s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't1' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_ad_list t1
+SQL: SELECT t2.img,t1.id,t2.title,t2.url FROM cs_ad_list t1 left JOIN cs_ad_content t2 on t1.id = t2.ad_list_id  WHERE ( t1.simple_code='LMCY' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000864s ]
+SQL: SHOW COLUMNS FROM `cs_content_content` [ RunTime:0.019667s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cs_content_content` WHERE ( `col_id` = 42 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000633s ]
+SQL: SELECT * FROM `cs_content_content` WHERE ( `col_id` = 42 ) AND ( `status` = 1 ) ORDER BY istop desc,create_time desc,update_time desc LIMIT 0,10   [ RunTime:0.001384s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 32 ) LIMIT 1   [ RunTime:0.000811s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000266s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000374s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.062559s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062806s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.003481s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003606s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.004453s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004579s ]
+
+[ 2018-11-08T15:24:12+08:00 ] 192.168.0.43 /web/map/index/ptpcode/LMCY
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002832s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004948s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `cs_content_category` [ RunTime:0.021586s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = 0 ) AND ( `status` = 1 ) ORDER BY sort asc  [ RunTime:0.001343s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 41 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000806s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 46 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000730s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 52 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000800s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'LMCY' ) LIMIT 1   [ RunTime:0.000774s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'LMCY' ) LIMIT 1   [ RunTime:0.000803s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `status` = 1 ) AND ( `pid` = 41 ) ORDER BY sort asc  [ RunTime:0.000953s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'LMCY' ) LIMIT 1   [ RunTime:0.000735s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = 41 ) AND ( `status` = 1 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000812s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( tpcode='LMCY' and pid=0 ) LIMIT 1   [ RunTime:0.000779s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( id='42' ) LIMIT 1   [ RunTime:0.000790s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 42 ) LIMIT 1   [ RunTime:0.000703s ]
+SQL: SHOW COLUMNS FROM cs_ad_list t1 [ RunTime:0.000500s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't1' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_ad_list t1
+SQL: SELECT t2.img,t1.id,t2.title,t2.url FROM cs_ad_list t1 left JOIN cs_ad_content t2 on t1.id = t2.ad_list_id  WHERE ( t1.simple_code='LMCY' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000630s ]
+SQL: SHOW COLUMNS FROM `cs_content_content` [ RunTime:0.020753s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cs_content_content` WHERE ( `col_id` = 42 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000697s ]
+SQL: SELECT * FROM `cs_content_content` WHERE ( `col_id` = 42 ) AND ( `status` = 1 ) ORDER BY istop desc,create_time desc,update_time desc LIMIT 0,10   [ RunTime:0.001326s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 32 ) LIMIT 1   [ RunTime:0.000680s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000270s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000424s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.036776s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036898s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.003736s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003871s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.004276s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004464s ]
+
+[ 2018-11-08T15:24:24+08:00 ] 192.168.0.43 /web/about/page_content/id/42/ptpcode/LMCY
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.003538s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005920s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `cs_content_category` [ RunTime:0.024356s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = 0 ) AND ( `status` = 1 ) ORDER BY sort asc  [ RunTime:0.000997s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 41 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000819s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 46 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000720s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 52 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000675s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'LMCY' ) LIMIT 1   [ RunTime:0.000716s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'LMCY' ) LIMIT 1   [ RunTime:0.000719s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `status` = 1 ) AND ( `pid` = 41 ) ORDER BY sort asc  [ RunTime:0.000853s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( tpcode='LMCY' and pid=0 ) LIMIT 1   [ RunTime:0.000754s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( id='42' ) LIMIT 1   [ RunTime:0.000773s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 42 ) LIMIT 1   [ RunTime:0.001860s ]
+SQL: SHOW COLUMNS FROM cs_ad_list t1 [ RunTime:0.000617s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't1' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_ad_list t1
+SQL: SELECT t2.img,t1.id,t2.title,t2.url FROM cs_ad_list t1 left JOIN cs_ad_content t2 on t1.id = t2.ad_list_id  WHERE ( t1.simple_code='LMCY' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000823s ]
+SQL: SHOW COLUMNS FROM `cs_content_content` [ RunTime:0.020427s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cs_content_content` WHERE ( `col_id` = 42 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000670s ]
+SQL: SELECT * FROM `cs_content_content` WHERE ( `col_id` = 42 ) AND ( `status` = 1 ) ORDER BY istop desc,create_time desc,update_time desc LIMIT 0,10   [ RunTime:0.001145s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 42 ) LIMIT 1   [ RunTime:0.000728s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000178s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000331s ]
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\3776fe2913663d859f52be2bfec5ab5a.php 第 167 行.
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\3776fe2913663d859f52be2bfec5ab5a.php 第 168 行.
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\3776fe2913663d859f52be2bfec5ab5a.php 第 169 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.043756s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043912s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.004645s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004866s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.005545s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005756s ]
+
+[ 2018-11-08T15:24:26+08:00 ] 192.168.0.43 /web/about/page_content/id/42/ptpcode/header.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.003130s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005432s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `cs_content_category` [ RunTime:0.020793s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = 0 ) AND ( `status` = 1 ) ORDER BY sort asc  [ RunTime:0.000954s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 41 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000631s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 46 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000746s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 52 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000807s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'header' ) LIMIT 1   [ RunTime:0.000600s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'header' ) LIMIT 1   [ RunTime:0.000666s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `status` = 1 ) AND ( `pid` = null ) ORDER BY sort asc  [ RunTime:0.000918s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( tpcode='header' and pid=0 ) LIMIT 1   [ RunTime:0.000774s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( id='42' ) LIMIT 1   [ RunTime:0.000669s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 42 ) LIMIT 1   [ RunTime:0.000738s ]
+SQL: SHOW COLUMNS FROM cs_ad_list t1 [ RunTime:0.000454s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't1' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_ad_list t1
+SQL: SELECT t2.img,t1.id,t2.title,t2.url FROM cs_ad_list t1 left JOIN cs_ad_content t2 on t1.id = t2.ad_list_id  WHERE ( t1.simple_code='header' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000570s ]
+SQL: SHOW COLUMNS FROM `cs_content_content` [ RunTime:0.020460s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cs_content_content` WHERE ( `col_id` = 42 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000597s ]
+SQL: SELECT * FROM `cs_content_content` WHERE ( `col_id` = 42 ) AND ( `status` = 1 ) ORDER BY istop desc,create_time desc,update_time desc LIMIT 0,10   [ RunTime:0.001833s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 42 ) LIMIT 1   [ RunTime:0.001003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000180s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000292s ]
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\3776fe2913663d859f52be2bfec5ab5a.php 第 167 行.
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\3776fe2913663d859f52be2bfec5ab5a.php 第 168 行.
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\3776fe2913663d859f52be2bfec5ab5a.php 第 169 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.043894s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044041s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.003068s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003167s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.003265s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003368s ]
+
+[ 2018-11-08T15:24:28+08:00 ] 192.168.0.43 /web/about/page_content/id/42/ptpcode/footer.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002647s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005400s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `cs_content_category` [ RunTime:0.025375s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = 0 ) AND ( `status` = 1 ) ORDER BY sort asc  [ RunTime:0.000941s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 41 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000697s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 46 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000654s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 52 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000660s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'footer' ) LIMIT 1   [ RunTime:0.000702s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'footer' ) LIMIT 1   [ RunTime:0.000779s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `status` = 1 ) AND ( `pid` = null ) ORDER BY sort asc  [ RunTime:0.000861s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( tpcode='footer' and pid=0 ) LIMIT 1   [ RunTime:0.001467s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( id='42' ) LIMIT 1   [ RunTime:0.000961s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 42 ) LIMIT 1   [ RunTime:0.001071s ]
+SQL: SHOW COLUMNS FROM cs_ad_list t1 [ RunTime:0.000516s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't1' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_ad_list t1
+SQL: SELECT t2.img,t1.id,t2.title,t2.url FROM cs_ad_list t1 left JOIN cs_ad_content t2 on t1.id = t2.ad_list_id  WHERE ( t1.simple_code='footer' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000881s ]
+SQL: SHOW COLUMNS FROM `cs_content_content` [ RunTime:0.025247s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cs_content_content` WHERE ( `col_id` = 42 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.001128s ]
+SQL: SELECT * FROM `cs_content_content` WHERE ( `col_id` = 42 ) AND ( `status` = 1 ) ORDER BY istop desc,create_time desc,update_time desc LIMIT 0,10   [ RunTime:0.001585s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 42 ) LIMIT 1   [ RunTime:0.000739s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000118s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000212s ]
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\3776fe2913663d859f52be2bfec5ab5a.php 第 167 行.
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\3776fe2913663d859f52be2bfec5ab5a.php 第 168 行.
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\3776fe2913663d859f52be2bfec5ab5a.php 第 169 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.043565s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043706s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.003188s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003377s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.004170s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004377s ]
+
+[ 2018-11-08T15:24:31+08:00 ] 192.168.0.43 /Web/about/page_detail/news_id/53/id/42/ptpcode/LMCY
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.003019s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005672s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `cs_content_category` [ RunTime:0.024516s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = 0 ) AND ( `status` = 1 ) ORDER BY sort asc  [ RunTime:0.001429s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 41 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000782s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 46 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000832s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 52 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000738s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'LMCY' ) LIMIT 1   [ RunTime:0.000768s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'LMCY' ) LIMIT 1   [ RunTime:0.000794s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `status` = 1 ) AND ( `pid` = 41 ) ORDER BY sort asc  [ RunTime:0.000860s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( tpcode='LMCY' and pid=0 ) LIMIT 1   [ RunTime:0.000894s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( id='42' ) LIMIT 1   [ RunTime:0.000749s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 42 ) LIMIT 1   [ RunTime:0.000767s ]
+SQL: SHOW COLUMNS FROM cs_ad_list t1 [ RunTime:0.000499s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't1' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_ad_list t1
+SQL: SELECT t2.img,t1.id,t2.title,t2.url FROM cs_ad_list t1 left JOIN cs_ad_content t2 on t1.id = t2.ad_list_id  WHERE ( t1.simple_code='LMCY' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000696s ]
+SQL: SHOW COLUMNS FROM `cs_content_content` [ RunTime:0.025388s ]
+SQL: SELECT `title`,`id` FROM `cs_content_content` WHERE ( col_id=42 ) ORDER BY istop desc,create_time desc,update_time desc  [ RunTime:0.001182s ]
+SQL: SELECT * FROM `cs_content_content` WHERE ( id=53 ) LIMIT 1   [ RunTime:0.000964s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000157s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000302s ]
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\15756e93d2ac12786a568d422dd5989b.php 第 121 行.
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\15756e93d2ac12786a568d422dd5989b.php 第 122 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.035725s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035842s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.003524s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003649s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.003953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004067s ]
+
+[ 2018-11-08T15:24:33+08:00 ] 192.168.0.43 /Web/about/page_detail/news_id/53/id/42/ptpcode/header.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.003441s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006933s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `cs_content_category` [ RunTime:0.027015s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = 0 ) AND ( `status` = 1 ) ORDER BY sort asc  [ RunTime:0.001117s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 41 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000683s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 46 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000646s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 52 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000673s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'header' ) LIMIT 1   [ RunTime:0.000617s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'header' ) LIMIT 1   [ RunTime:0.000578s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `status` = 1 ) AND ( `pid` = null ) ORDER BY sort asc  [ RunTime:0.000951s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( tpcode='header' and pid=0 ) LIMIT 1   [ RunTime:0.001097s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( id='42' ) LIMIT 1   [ RunTime:0.001697s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 42 ) LIMIT 1   [ RunTime:0.000817s ]
+SQL: SHOW COLUMNS FROM cs_ad_list t1 [ RunTime:0.000471s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't1' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_ad_list t1
+SQL: SELECT t2.img,t1.id,t2.title,t2.url FROM cs_ad_list t1 left JOIN cs_ad_content t2 on t1.id = t2.ad_list_id  WHERE ( t1.simple_code='header' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000744s ]
+SQL: SHOW COLUMNS FROM `cs_content_content` [ RunTime:0.022282s ]
+SQL: SELECT `title`,`id` FROM `cs_content_content` WHERE ( col_id=42 ) ORDER BY istop desc,create_time desc,update_time desc  [ RunTime:0.001128s ]
+SQL: SELECT * FROM `cs_content_content` WHERE ( id=53 ) LIMIT 1   [ RunTime:0.000951s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000141s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000267s ]
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\15756e93d2ac12786a568d422dd5989b.php 第 121 行.
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\15756e93d2ac12786a568d422dd5989b.php 第 122 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.040628s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040805s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.003484s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003650s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.005698s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005999s ]
+
+[ 2018-11-08T15:24:34+08:00 ] 192.168.0.43 /Web/about/page_detail/news_id/53/id/42/ptpcode/footer.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002515s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004462s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `cs_content_category` [ RunTime:0.025377s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = 0 ) AND ( `status` = 1 ) ORDER BY sort asc  [ RunTime:0.001220s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 41 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000847s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 46 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000668s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 52 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000802s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'footer' ) LIMIT 1   [ RunTime:0.000689s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'footer' ) LIMIT 1   [ RunTime:0.000725s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `status` = 1 ) AND ( `pid` = null ) ORDER BY sort asc  [ RunTime:0.000755s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( tpcode='footer' and pid=0 ) LIMIT 1   [ RunTime:0.000741s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( id='42' ) LIMIT 1   [ RunTime:0.001015s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 42 ) LIMIT 1   [ RunTime:0.001425s ]
+SQL: SHOW COLUMNS FROM cs_ad_list t1 [ RunTime:0.000562s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't1' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_ad_list t1
+SQL: SELECT t2.img,t1.id,t2.title,t2.url FROM cs_ad_list t1 left JOIN cs_ad_content t2 on t1.id = t2.ad_list_id  WHERE ( t1.simple_code='footer' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000876s ]
+SQL: SHOW COLUMNS FROM `cs_content_content` [ RunTime:0.024534s ]
+SQL: SELECT `title`,`id` FROM `cs_content_content` WHERE ( col_id=42 ) ORDER BY istop desc,create_time desc,update_time desc  [ RunTime:0.000950s ]
+SQL: SELECT * FROM `cs_content_content` WHERE ( id=53 ) LIMIT 1   [ RunTime:0.000940s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000168s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000372s ]
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\15756e93d2ac12786a568d422dd5989b.php 第 121 行.
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\15756e93d2ac12786a568d422dd5989b.php 第 122 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.042051s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042265s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.003351s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003519s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.006218s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006385s ]
+
+[ 2018-11-08T15:24:39+08:00 ] 192.168.0.43 /web/about/page_content/id/43/ptpcode/LMCY
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002785s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004886s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `cs_content_category` [ RunTime:0.023747s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = 0 ) AND ( `status` = 1 ) ORDER BY sort asc  [ RunTime:0.001434s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 41 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000781s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 46 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000688s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 52 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000742s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'LMCY' ) LIMIT 1   [ RunTime:0.000739s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'LMCY' ) LIMIT 1   [ RunTime:0.000795s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `status` = 1 ) AND ( `pid` = 41 ) ORDER BY sort asc  [ RunTime:0.000914s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( tpcode='LMCY' and pid=0 ) LIMIT 1   [ RunTime:0.000899s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( id='43' ) LIMIT 1   [ RunTime:0.000790s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 43 ) LIMIT 1   [ RunTime:0.000728s ]
+SQL: SHOW COLUMNS FROM cs_ad_list t1 [ RunTime:0.000538s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't1' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_ad_list t1
+SQL: SELECT t2.img,t1.id,t2.title,t2.url FROM cs_ad_list t1 left JOIN cs_ad_content t2 on t1.id = t2.ad_list_id  WHERE ( t1.simple_code='LMCY' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000849s ]
+SQL: SHOW COLUMNS FROM `cs_content_content` [ RunTime:0.024026s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cs_content_content` WHERE ( `col_id` = 43 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000669s ]
+SQL: SELECT * FROM `cs_content_content` WHERE ( `col_id` = 43 ) AND ( `status` = 1 ) ORDER BY istop desc,create_time desc,update_time desc LIMIT 0,10   [ RunTime:0.001190s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 43 ) LIMIT 1   [ RunTime:0.000800s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000278s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000534s ]
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\3776fe2913663d859f52be2bfec5ab5a.php 第 167 行.
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\3776fe2913663d859f52be2bfec5ab5a.php 第 168 行.
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\3776fe2913663d859f52be2bfec5ab5a.php 第 169 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.045646s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045834s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.002857s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002976s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.003479s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003583s ]
+
+[ 2018-11-08T15:24:40+08:00 ] 192.168.0.43 /web/about/page_content/id/43/ptpcode/header.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002706s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004692s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `cs_content_category` [ RunTime:0.022918s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = 0 ) AND ( `status` = 1 ) ORDER BY sort asc  [ RunTime:0.001642s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 41 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000705s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 46 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000651s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 52 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000667s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'header' ) LIMIT 1   [ RunTime:0.000705s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'header' ) LIMIT 1   [ RunTime:0.000706s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `status` = 1 ) AND ( `pid` = null ) ORDER BY sort asc  [ RunTime:0.000734s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( tpcode='header' and pid=0 ) LIMIT 1   [ RunTime:0.000711s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( id='43' ) LIMIT 1   [ RunTime:0.000756s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 43 ) LIMIT 1   [ RunTime:0.000668s ]
+SQL: SHOW COLUMNS FROM cs_ad_list t1 [ RunTime:0.000511s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't1' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_ad_list t1
+SQL: SELECT t2.img,t1.id,t2.title,t2.url FROM cs_ad_list t1 left JOIN cs_ad_content t2 on t1.id = t2.ad_list_id  WHERE ( t1.simple_code='header' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000700s ]
+SQL: SHOW COLUMNS FROM `cs_content_content` [ RunTime:0.021760s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cs_content_content` WHERE ( `col_id` = 43 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000674s ]
+SQL: SELECT * FROM `cs_content_content` WHERE ( `col_id` = 43 ) AND ( `status` = 1 ) ORDER BY istop desc,create_time desc,update_time desc LIMIT 0,10   [ RunTime:0.001044s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 43 ) LIMIT 1   [ RunTime:0.000637s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000184s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000331s ]
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\3776fe2913663d859f52be2bfec5ab5a.php 第 167 行.
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\3776fe2913663d859f52be2bfec5ab5a.php 第 168 行.
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\3776fe2913663d859f52be2bfec5ab5a.php 第 169 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.043167s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043341s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.003225s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003361s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.002920s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003038s ]
+
+[ 2018-11-08T15:24:42+08:00 ] 192.168.0.43 /web/about/page_content/id/43/ptpcode/footer.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002767s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004812s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `cs_content_category` [ RunTime:0.022084s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = 0 ) AND ( `status` = 1 ) ORDER BY sort asc  [ RunTime:0.001190s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 41 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000776s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 46 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000721s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 52 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000705s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'footer' ) LIMIT 1   [ RunTime:0.000847s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'footer' ) LIMIT 1   [ RunTime:0.000926s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `status` = 1 ) AND ( `pid` = null ) ORDER BY sort asc  [ RunTime:0.001083s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( tpcode='footer' and pid=0 ) LIMIT 1   [ RunTime:0.000929s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( id='43' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 43 ) LIMIT 1   [ RunTime:0.000980s ]
+SQL: SHOW COLUMNS FROM cs_ad_list t1 [ RunTime:0.000581s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't1' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_ad_list t1
+SQL: SELECT t2.img,t1.id,t2.title,t2.url FROM cs_ad_list t1 left JOIN cs_ad_content t2 on t1.id = t2.ad_list_id  WHERE ( t1.simple_code='footer' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000884s ]
+SQL: SHOW COLUMNS FROM `cs_content_content` [ RunTime:0.026918s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cs_content_content` WHERE ( `col_id` = 43 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000791s ]
+SQL: SELECT * FROM `cs_content_content` WHERE ( `col_id` = 43 ) AND ( `status` = 1 ) ORDER BY istop desc,create_time desc,update_time desc LIMIT 0,10   [ RunTime:0.001346s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 43 ) LIMIT 1   [ RunTime:0.000794s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000112s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000206s ]
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\3776fe2913663d859f52be2bfec5ab5a.php 第 167 行.
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\3776fe2913663d859f52be2bfec5ab5a.php 第 168 行.
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\3776fe2913663d859f52be2bfec5ab5a.php 第 169 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.038058s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038204s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.003228s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003366s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.004059s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004220s ]
+
+[ 2018-11-08T15:24:49+08:00 ] 192.168.0.43 /Web/about/page_detail/news_id/56/id/43/ptpcode/LMCY
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.004202s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007285s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `cs_content_category` [ RunTime:0.021690s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = 0 ) AND ( `status` = 1 ) ORDER BY sort asc  [ RunTime:0.000979s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 41 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000691s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 46 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000619s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 52 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000713s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'LMCY' ) LIMIT 1   [ RunTime:0.000798s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'LMCY' ) LIMIT 1   [ RunTime:0.000722s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `status` = 1 ) AND ( `pid` = 41 ) ORDER BY sort asc  [ RunTime:0.001035s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( tpcode='LMCY' and pid=0 ) LIMIT 1   [ RunTime:0.001162s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( id='43' ) LIMIT 1   [ RunTime:0.000790s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 43 ) LIMIT 1   [ RunTime:0.000752s ]
+SQL: SHOW COLUMNS FROM cs_ad_list t1 [ RunTime:0.000557s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't1' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_ad_list t1
+SQL: SELECT t2.img,t1.id,t2.title,t2.url FROM cs_ad_list t1 left JOIN cs_ad_content t2 on t1.id = t2.ad_list_id  WHERE ( t1.simple_code='LMCY' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000702s ]
+SQL: SHOW COLUMNS FROM `cs_content_content` [ RunTime:0.021939s ]
+SQL: SELECT `title`,`id` FROM `cs_content_content` WHERE ( col_id=43 ) ORDER BY istop desc,create_time desc,update_time desc  [ RunTime:0.001024s ]
+SQL: SELECT * FROM `cs_content_content` WHERE ( id=56 ) LIMIT 1   [ RunTime:0.000806s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000165s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000393s ]
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\15756e93d2ac12786a568d422dd5989b.php 第 121 行.
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\15756e93d2ac12786a568d422dd5989b.php 第 122 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.035506s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035631s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.006088s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006213s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.007354s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007508s ]
+
+[ 2018-11-08T15:24:50+08:00 ] 192.168.0.43 /Web/about/page_detail/news_id/56/id/43/ptpcode/header.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002740s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004973s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `cs_content_category` [ RunTime:0.023661s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = 0 ) AND ( `status` = 1 ) ORDER BY sort asc  [ RunTime:0.001152s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 41 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000834s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 46 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000723s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 52 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000765s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'header' ) LIMIT 1   [ RunTime:0.000761s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'header' ) LIMIT 1   [ RunTime:0.000886s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `status` = 1 ) AND ( `pid` = null ) ORDER BY sort asc  [ RunTime:0.001037s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( tpcode='header' and pid=0 ) LIMIT 1   [ RunTime:0.001308s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( id='43' ) LIMIT 1   [ RunTime:0.000833s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 43 ) LIMIT 1   [ RunTime:0.000818s ]
+SQL: SHOW COLUMNS FROM cs_ad_list t1 [ RunTime:0.000525s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't1' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_ad_list t1
+SQL: SELECT t2.img,t1.id,t2.title,t2.url FROM cs_ad_list t1 left JOIN cs_ad_content t2 on t1.id = t2.ad_list_id  WHERE ( t1.simple_code='header' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000748s ]
+SQL: SHOW COLUMNS FROM `cs_content_content` [ RunTime:0.025249s ]
+SQL: SELECT `title`,`id` FROM `cs_content_content` WHERE ( col_id=43 ) ORDER BY istop desc,create_time desc,update_time desc  [ RunTime:0.001147s ]
+SQL: SELECT * FROM `cs_content_content` WHERE ( id=56 ) LIMIT 1   [ RunTime:0.000990s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000151s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000317s ]
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\15756e93d2ac12786a568d422dd5989b.php 第 121 行.
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\15756e93d2ac12786a568d422dd5989b.php 第 122 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.034038s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034173s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.002385s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002471s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.002837s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002930s ]
+
+[ 2018-11-08T15:24:52+08:00 ] 192.168.0.43 /Web/about/page_detail/news_id/56/id/43/ptpcode/footer.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002775s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004937s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `cs_content_category` [ RunTime:0.029260s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = 0 ) AND ( `status` = 1 ) ORDER BY sort asc  [ RunTime:0.001185s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 41 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000792s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 46 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000781s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 52 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000843s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'footer' ) LIMIT 1   [ RunTime:0.000946s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'footer' ) LIMIT 1   [ RunTime:0.000750s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `status` = 1 ) AND ( `pid` = null ) ORDER BY sort asc  [ RunTime:0.000868s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( tpcode='footer' and pid=0 ) LIMIT 1   [ RunTime:0.000840s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( id='43' ) LIMIT 1   [ RunTime:0.000771s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 43 ) LIMIT 1   [ RunTime:0.000855s ]
+SQL: SHOW COLUMNS FROM cs_ad_list t1 [ RunTime:0.000497s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't1' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_ad_list t1
+SQL: SELECT t2.img,t1.id,t2.title,t2.url FROM cs_ad_list t1 left JOIN cs_ad_content t2 on t1.id = t2.ad_list_id  WHERE ( t1.simple_code='footer' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000705s ]
+SQL: SHOW COLUMNS FROM `cs_content_content` [ RunTime:0.023576s ]
+SQL: SELECT `title`,`id` FROM `cs_content_content` WHERE ( col_id=43 ) ORDER BY istop desc,create_time desc,update_time desc  [ RunTime:0.001125s ]
+SQL: SELECT * FROM `cs_content_content` WHERE ( id=56 ) LIMIT 1   [ RunTime:0.000889s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000100s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000199s ]
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\15756e93d2ac12786a568d422dd5989b.php 第 121 行.
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\15756e93d2ac12786a568d422dd5989b.php 第 122 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.034973s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035121s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.003276s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003492s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.004795s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004975s ]
+
+[ 2018-11-08T15:24:53+08:00 ] 192.168.0.43 /web/about/page_content/id/44/ptpcode/LMCY
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.004698s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007031s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `cs_content_category` [ RunTime:0.021838s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = 0 ) AND ( `status` = 1 ) ORDER BY sort asc  [ RunTime:0.000954s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 41 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000652s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 46 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000779s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 52 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000587s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'LMCY' ) LIMIT 1   [ RunTime:0.000542s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'LMCY' ) LIMIT 1   [ RunTime:0.000658s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `status` = 1 ) AND ( `pid` = 41 ) ORDER BY sort asc  [ RunTime:0.000899s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( tpcode='LMCY' and pid=0 ) LIMIT 1   [ RunTime:0.000689s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( id='44' ) LIMIT 1   [ RunTime:0.000570s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 44 ) LIMIT 1   [ RunTime:0.000687s ]
+SQL: SHOW COLUMNS FROM cs_ad_list t1 [ RunTime:0.000432s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't1' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_ad_list t1
+SQL: SELECT t2.img,t1.id,t2.title,t2.url FROM cs_ad_list t1 left JOIN cs_ad_content t2 on t1.id = t2.ad_list_id  WHERE ( t1.simple_code='LMCY' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000636s ]
+SQL: SHOW COLUMNS FROM `cs_content_content` [ RunTime:0.023755s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cs_content_content` WHERE ( `col_id` = 44 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000661s ]
+SQL: SELECT * FROM `cs_content_content` WHERE ( `col_id` = 44 ) AND ( `status` = 1 ) ORDER BY istop desc,create_time desc,update_time desc LIMIT 0,10   [ RunTime:0.001367s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 44 ) LIMIT 1   [ RunTime:0.000721s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000191s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000335s ]
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\3776fe2913663d859f52be2bfec5ab5a.php 第 167 行.
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\3776fe2913663d859f52be2bfec5ab5a.php 第 168 行.
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\3776fe2913663d859f52be2bfec5ab5a.php 第 169 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.039827s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039984s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.002498s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002619s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.003144s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003309s ]
+
+[ 2018-11-08T15:24:55+08:00 ] 192.168.0.43 /web/about/page_content/id/44/ptpcode/header.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002703s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004747s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `cs_content_category` [ RunTime:0.025318s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = 0 ) AND ( `status` = 1 ) ORDER BY sort asc  [ RunTime:0.001218s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 41 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000763s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 46 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000778s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 52 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000737s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'header' ) LIMIT 1   [ RunTime:0.000891s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'header' ) LIMIT 1   [ RunTime:0.000768s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `status` = 1 ) AND ( `pid` = null ) ORDER BY sort asc  [ RunTime:0.000749s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( tpcode='header' and pid=0 ) LIMIT 1   [ RunTime:0.000710s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( id='44' ) LIMIT 1   [ RunTime:0.000789s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 44 ) LIMIT 1   [ RunTime:0.000798s ]
+SQL: SHOW COLUMNS FROM cs_ad_list t1 [ RunTime:0.000519s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't1' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_ad_list t1
+SQL: SELECT t2.img,t1.id,t2.title,t2.url FROM cs_ad_list t1 left JOIN cs_ad_content t2 on t1.id = t2.ad_list_id  WHERE ( t1.simple_code='header' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000900s ]
+SQL: SHOW COLUMNS FROM `cs_content_content` [ RunTime:0.022681s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cs_content_content` WHERE ( `col_id` = 44 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000770s ]
+SQL: SELECT * FROM `cs_content_content` WHERE ( `col_id` = 44 ) AND ( `status` = 1 ) ORDER BY istop desc,create_time desc,update_time desc LIMIT 0,10   [ RunTime:0.001057s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 44 ) LIMIT 1   [ RunTime:0.000664s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000184s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000356s ]
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\3776fe2913663d859f52be2bfec5ab5a.php 第 167 行.
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\3776fe2913663d859f52be2bfec5ab5a.php 第 168 行.
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\3776fe2913663d859f52be2bfec5ab5a.php 第 169 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.042118s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042253s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.003234s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003390s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.003908s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004034s ]
+
+[ 2018-11-08T15:24:56+08:00 ] 192.168.0.43 /web/about/page_content/id/44/ptpcode/footer.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002955s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004963s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `cs_content_category` [ RunTime:0.032869s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = 0 ) AND ( `status` = 1 ) ORDER BY sort asc  [ RunTime:0.001275s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 41 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000917s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 46 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000834s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 52 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000835s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'footer' ) LIMIT 1   [ RunTime:0.000805s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'footer' ) LIMIT 1   [ RunTime:0.000757s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `status` = 1 ) AND ( `pid` = null ) ORDER BY sort asc  [ RunTime:0.000943s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( tpcode='footer' and pid=0 ) LIMIT 1   [ RunTime:0.000831s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( id='44' ) LIMIT 1   [ RunTime:0.000919s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 44 ) LIMIT 1   [ RunTime:0.000934s ]
+SQL: SHOW COLUMNS FROM cs_ad_list t1 [ RunTime:0.000575s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't1' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_ad_list t1
+SQL: SELECT t2.img,t1.id,t2.title,t2.url FROM cs_ad_list t1 left JOIN cs_ad_content t2 on t1.id = t2.ad_list_id  WHERE ( t1.simple_code='footer' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000803s ]
+SQL: SHOW COLUMNS FROM `cs_content_content` [ RunTime:0.028831s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cs_content_content` WHERE ( `col_id` = 44 ) AND ( `status` = 1 ) LIMIT 1   [ RunTime:0.000919s ]
+SQL: SELECT * FROM `cs_content_content` WHERE ( `col_id` = 44 ) AND ( `status` = 1 ) ORDER BY istop desc,create_time desc,update_time desc LIMIT 0,10   [ RunTime:0.001282s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 44 ) LIMIT 1   [ RunTime:0.000818s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000256s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000453s ]
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\3776fe2913663d859f52be2bfec5ab5a.php 第 167 行.
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\3776fe2913663d859f52be2bfec5ab5a.php 第 168 行.
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\3776fe2913663d859f52be2bfec5ab5a.php 第 169 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.048005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048182s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.003497s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003670s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.004157s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004324s ]
+
+[ 2018-11-08T15:25:14+08:00 ] 192.168.0.43 /web/about/content/ptpcode/LMJS
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002606s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004630s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `cs_content_category` [ RunTime:0.021168s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = 0 ) AND ( `status` = 1 ) ORDER BY sort asc  [ RunTime:0.000919s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 41 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000612s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 46 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000589s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 52 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000738s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'LMJS' ) LIMIT 1   [ RunTime:0.000699s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'LMJS' ) LIMIT 1   [ RunTime:0.000730s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `status` = 1 ) AND ( `pid` = 46 ) ORDER BY sort asc  [ RunTime:0.000859s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'LMJS' ) LIMIT 1   [ RunTime:0.000688s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = 46 ) AND ( `status` = 1 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000780s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( tpcode='LMJS' and pid=0 ) LIMIT 1   [ RunTime:0.000743s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( id='47' ) LIMIT 1   [ RunTime:0.000736s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 47 ) LIMIT 1   [ RunTime:0.000731s ]
+SQL: SHOW COLUMNS FROM cs_ad_list t1 [ RunTime:0.000509s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't1' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_ad_list t1
+SQL: SELECT t2.img,t1.id,t2.title,t2.url FROM cs_ad_list t1 left JOIN cs_ad_content t2 on t1.id = t2.ad_list_id  WHERE ( t1.simple_code='LMJS' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000735s ]
+SQL: SHOW COLUMNS FROM `cs_content_content` [ RunTime:0.018929s ]
+SQL: SELECT * FROM `cs_content_content` WHERE ( `col_id` = 47 ) AND ( `status` = 1 ) ORDER BY istop desc,create_time desc,update_time desc  [ RunTime:0.001130s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 47 ) LIMIT 1   [ RunTime:0.000726s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000094s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000190s ]
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\9191bbf4b5b0da2785ad1f0619dfa3c1.php 第 120 行.
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\9191bbf4b5b0da2785ad1f0619dfa3c1.php 第 121 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.029579s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029728s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.002826s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002966s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.003341s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003442s ]
+
+[ 2018-11-08T15:25:16+08:00 ] 192.168.0.43 /web/about/content/ptpcode/header.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002679s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004554s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `cs_content_category` [ RunTime:0.025184s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = 0 ) AND ( `status` = 1 ) ORDER BY sort asc  [ RunTime:0.001098s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 41 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000756s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 46 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000723s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 52 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000769s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'header' ) LIMIT 1   [ RunTime:0.000710s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'header' ) LIMIT 1   [ RunTime:0.000769s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `status` = 1 ) AND ( `pid` = null ) ORDER BY sort asc  [ RunTime:0.000902s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'header' ) LIMIT 1   [ RunTime:0.000781s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = null ) AND ( `status` = 1 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000796s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( tpcode='header' and pid=0 ) LIMIT 1   [ RunTime:0.000758s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( id='' ) LIMIT 1   [ RunTime:0.000891s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = null ) LIMIT 1   [ RunTime:0.001220s ]
+SQL: SHOW COLUMNS FROM cs_ad_list t1 [ RunTime:0.000533s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't1' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_ad_list t1
+SQL: SELECT t2.img,t1.id,t2.title,t2.url FROM cs_ad_list t1 left JOIN cs_ad_content t2 on t1.id = t2.ad_list_id  WHERE ( t1.simple_code='header' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000875s ]
+SQL: SHOW COLUMNS FROM `cs_content_content` [ RunTime:0.022827s ]
+SQL: SELECT * FROM `cs_content_content` WHERE ( `col_id` = 0 ) AND ( `status` = 1 ) ORDER BY istop desc,create_time desc,update_time desc  [ RunTime:0.000960s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 0 ) LIMIT 1   [ RunTime:0.000634s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000086s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000180s ]
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\9191bbf4b5b0da2785ad1f0619dfa3c1.php 第 120 行.
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\9191bbf4b5b0da2785ad1f0619dfa3c1.php 第 121 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.032958s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033148s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.003510s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003675s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.003970s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004100s ]
+
+[ 2018-11-08T15:25:17+08:00 ] 192.168.0.43 /web/about/content/ptpcode/footer.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002690s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004655s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `cs_content_category` [ RunTime:0.027376s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = 0 ) AND ( `status` = 1 ) ORDER BY sort asc  [ RunTime:0.001011s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 41 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000884s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 46 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000794s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 52 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000916s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'footer' ) LIMIT 1   [ RunTime:0.000915s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'footer' ) LIMIT 1   [ RunTime:0.000849s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `status` = 1 ) AND ( `pid` = null ) ORDER BY sort asc  [ RunTime:0.000919s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'footer' ) LIMIT 1   [ RunTime:0.000946s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = null ) AND ( `status` = 1 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000912s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( tpcode='footer' and pid=0 ) LIMIT 1   [ RunTime:0.000923s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( id='' ) LIMIT 1   [ RunTime:0.000830s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = null ) LIMIT 1   [ RunTime:0.000716s ]
+SQL: SHOW COLUMNS FROM cs_ad_list t1 [ RunTime:0.000469s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't1' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_ad_list t1
+SQL: SELECT t2.img,t1.id,t2.title,t2.url FROM cs_ad_list t1 left JOIN cs_ad_content t2 on t1.id = t2.ad_list_id  WHERE ( t1.simple_code='footer' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000746s ]
+SQL: SHOW COLUMNS FROM `cs_content_content` [ RunTime:0.023394s ]
+SQL: SELECT * FROM `cs_content_content` WHERE ( `col_id` = 0 ) AND ( `status` = 1 ) ORDER BY istop desc,create_time desc,update_time desc  [ RunTime:0.001073s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 0 ) LIMIT 1   [ RunTime:0.000762s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000263s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000469s ]
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\9191bbf4b5b0da2785ad1f0619dfa3c1.php 第 120 行.
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\9191bbf4b5b0da2785ad1f0619dfa3c1.php 第 121 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.035949s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036105s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.003097s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003198s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.004109s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004270s ]
+
+[ 2018-11-08T15:25:19+08:00 ] 192.168.0.43 /web/about/content/id/48/ptpcode/LMJS
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002870s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004986s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `cs_content_category` [ RunTime:0.021309s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = 0 ) AND ( `status` = 1 ) ORDER BY sort asc  [ RunTime:0.001070s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 41 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000675s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 46 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000673s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 52 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000655s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'LMJS' ) LIMIT 1   [ RunTime:0.000739s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'LMJS' ) LIMIT 1   [ RunTime:0.000791s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `status` = 1 ) AND ( `pid` = 46 ) ORDER BY sort asc  [ RunTime:0.000975s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( tpcode='LMJS' and pid=0 ) LIMIT 1   [ RunTime:0.000762s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( id='48' ) LIMIT 1   [ RunTime:0.000736s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 48 ) LIMIT 1   [ RunTime:0.000774s ]
+SQL: SHOW COLUMNS FROM cs_ad_list t1 [ RunTime:0.000398s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't1' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_ad_list t1
+SQL: SELECT t2.img,t1.id,t2.title,t2.url FROM cs_ad_list t1 left JOIN cs_ad_content t2 on t1.id = t2.ad_list_id  WHERE ( t1.simple_code='LMJS' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000647s ]
+SQL: SHOW COLUMNS FROM `cs_content_content` [ RunTime:0.023346s ]
+SQL: SELECT * FROM `cs_content_content` WHERE ( `col_id` = 48 ) AND ( `status` = 1 ) ORDER BY istop desc,create_time desc,update_time desc  [ RunTime:0.002546s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 48 ) LIMIT 1   [ RunTime:0.000819s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000093s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000193s ]
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\9191bbf4b5b0da2785ad1f0619dfa3c1.php 第 120 行.
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\9191bbf4b5b0da2785ad1f0619dfa3c1.php 第 121 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.031177s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031349s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.002942s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003043s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.003948s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004065s ]
+
+[ 2018-11-08T15:25:20+08:00 ] 192.168.0.43 /web/about/content/id/48/ptpcode/header.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002971s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005059s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `cs_content_category` [ RunTime:0.021667s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = 0 ) AND ( `status` = 1 ) ORDER BY sort asc  [ RunTime:0.000992s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 41 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000761s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 46 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000677s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 52 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000675s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'header' ) LIMIT 1   [ RunTime:0.000843s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'header' ) LIMIT 1   [ RunTime:0.000909s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `status` = 1 ) AND ( `pid` = null ) ORDER BY sort asc  [ RunTime:0.000962s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( tpcode='header' and pid=0 ) LIMIT 1   [ RunTime:0.000931s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( id='48' ) LIMIT 1   [ RunTime:0.000918s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 48 ) LIMIT 1   [ RunTime:0.000788s ]
+SQL: SHOW COLUMNS FROM cs_ad_list t1 [ RunTime:0.000469s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't1' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_ad_list t1
+SQL: SELECT t2.img,t1.id,t2.title,t2.url FROM cs_ad_list t1 left JOIN cs_ad_content t2 on t1.id = t2.ad_list_id  WHERE ( t1.simple_code='header' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000665s ]
+SQL: SHOW COLUMNS FROM `cs_content_content` [ RunTime:0.023228s ]
+SQL: SELECT * FROM `cs_content_content` WHERE ( `col_id` = 48 ) AND ( `status` = 1 ) ORDER BY istop desc,create_time desc,update_time desc  [ RunTime:0.001781s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 48 ) LIMIT 1   [ RunTime:0.000740s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000124s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000306s ]
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\9191bbf4b5b0da2785ad1f0619dfa3c1.php 第 120 行.
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\9191bbf4b5b0da2785ad1f0619dfa3c1.php 第 121 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.029129s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029236s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.002708s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002797s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.004052s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004219s ]
+
+[ 2018-11-08T15:25:22+08:00 ] 192.168.0.43 /web/about/content/id/48/ptpcode/footer.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002688s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004653s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `cs_content_category` [ RunTime:0.025153s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = 0 ) AND ( `status` = 1 ) ORDER BY sort asc  [ RunTime:0.001233s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 41 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000897s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 46 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000659s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 52 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000615s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'footer' ) LIMIT 1   [ RunTime:0.000685s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'footer' ) LIMIT 1   [ RunTime:0.000783s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `status` = 1 ) AND ( `pid` = null ) ORDER BY sort asc  [ RunTime:0.000912s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( tpcode='footer' and pid=0 ) LIMIT 1   [ RunTime:0.000787s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( id='48' ) LIMIT 1   [ RunTime:0.000875s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 48 ) LIMIT 1   [ RunTime:0.000833s ]
+SQL: SHOW COLUMNS FROM cs_ad_list t1 [ RunTime:0.000489s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't1' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_ad_list t1
+SQL: SELECT t2.img,t1.id,t2.title,t2.url FROM cs_ad_list t1 left JOIN cs_ad_content t2 on t1.id = t2.ad_list_id  WHERE ( t1.simple_code='footer' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000927s ]
+SQL: SHOW COLUMNS FROM `cs_content_content` [ RunTime:0.024707s ]
+SQL: SELECT * FROM `cs_content_content` WHERE ( `col_id` = 48 ) AND ( `status` = 1 ) ORDER BY istop desc,create_time desc,update_time desc  [ RunTime:0.002317s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 48 ) LIMIT 1   [ RunTime:0.000839s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000207s ]
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\9191bbf4b5b0da2785ad1f0619dfa3c1.php 第 120 行.
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\9191bbf4b5b0da2785ad1f0619dfa3c1.php 第 121 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.034690s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034852s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.003188s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003319s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.004502s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004709s ]
+
+[ 2018-11-08T15:25:23+08:00 ] 192.168.0.43 /web/about/content/id/49/ptpcode/LMJS
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002723s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004701s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `cs_content_category` [ RunTime:0.023296s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = 0 ) AND ( `status` = 1 ) ORDER BY sort asc  [ RunTime:0.000915s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 41 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.001784s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 46 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000811s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 52 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000523s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'LMJS' ) LIMIT 1   [ RunTime:0.000707s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'LMJS' ) LIMIT 1   [ RunTime:0.000724s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `status` = 1 ) AND ( `pid` = 46 ) ORDER BY sort asc  [ RunTime:0.000787s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( tpcode='LMJS' and pid=0 ) LIMIT 1   [ RunTime:0.000559s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( id='49' ) LIMIT 1   [ RunTime:0.000555s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 49 ) LIMIT 1   [ RunTime:0.000563s ]
+SQL: SHOW COLUMNS FROM cs_ad_list t1 [ RunTime:0.000357s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't1' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_ad_list t1
+SQL: SELECT t2.img,t1.id,t2.title,t2.url FROM cs_ad_list t1 left JOIN cs_ad_content t2 on t1.id = t2.ad_list_id  WHERE ( t1.simple_code='LMJS' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000567s ]
+SQL: SHOW COLUMNS FROM `cs_content_content` [ RunTime:0.020939s ]
+SQL: SELECT * FROM `cs_content_content` WHERE ( `col_id` = 49 ) AND ( `status` = 1 ) ORDER BY istop desc,create_time desc,update_time desc  [ RunTime:0.001147s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 49 ) LIMIT 1   [ RunTime:0.000948s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000083s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000221s ]
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\9191bbf4b5b0da2785ad1f0619dfa3c1.php 第 120 行.
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\9191bbf4b5b0da2785ad1f0619dfa3c1.php 第 121 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.036164s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036313s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.003121s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003222s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.003881s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003989s ]
+
+[ 2018-11-08T15:25:25+08:00 ] 192.168.0.43 /web/about/content/id/49/ptpcode/header.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002747s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004797s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `cs_content_category` [ RunTime:0.029014s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = 0 ) AND ( `status` = 1 ) ORDER BY sort asc  [ RunTime:0.001039s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 41 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000685s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 46 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000668s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 52 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000731s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'header' ) LIMIT 1   [ RunTime:0.000818s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'header' ) LIMIT 1   [ RunTime:0.000718s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `status` = 1 ) AND ( `pid` = null ) ORDER BY sort asc  [ RunTime:0.000779s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( tpcode='header' and pid=0 ) LIMIT 1   [ RunTime:0.000684s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( id='49' ) LIMIT 1   [ RunTime:0.000724s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 49 ) LIMIT 1   [ RunTime:0.001057s ]
+SQL: SHOW COLUMNS FROM cs_ad_list t1 [ RunTime:0.000531s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't1' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_ad_list t1
+SQL: SELECT t2.img,t1.id,t2.title,t2.url FROM cs_ad_list t1 left JOIN cs_ad_content t2 on t1.id = t2.ad_list_id  WHERE ( t1.simple_code='header' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000844s ]
+SQL: SHOW COLUMNS FROM `cs_content_content` [ RunTime:0.029358s ]
+SQL: SELECT * FROM `cs_content_content` WHERE ( `col_id` = 49 ) AND ( `status` = 1 ) ORDER BY istop desc,create_time desc,update_time desc  [ RunTime:0.000973s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 49 ) LIMIT 1   [ RunTime:0.000641s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000173s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000317s ]
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\9191bbf4b5b0da2785ad1f0619dfa3c1.php 第 120 行.
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\9191bbf4b5b0da2785ad1f0619dfa3c1.php 第 121 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.035193s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035295s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.003765s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003897s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.004321s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004491s ]
+
+[ 2018-11-08T15:25:26+08:00 ] 192.168.0.43 /web/about/content/id/49/ptpcode/footer.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.003468s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005787s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `cs_content_category` [ RunTime:0.107931s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = 0 ) AND ( `status` = 1 ) ORDER BY sort asc  [ RunTime:0.001828s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 41 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.001387s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 46 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000758s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 52 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000703s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'footer' ) LIMIT 1   [ RunTime:0.000850s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'footer' ) LIMIT 1   [ RunTime:0.000707s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `status` = 1 ) AND ( `pid` = null ) ORDER BY sort asc  [ RunTime:0.000813s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( tpcode='footer' and pid=0 ) LIMIT 1   [ RunTime:0.000823s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( id='49' ) LIMIT 1   [ RunTime:0.000815s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 49 ) LIMIT 1   [ RunTime:0.000916s ]
+SQL: SHOW COLUMNS FROM cs_ad_list t1 [ RunTime:0.000629s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't1' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_ad_list t1
+SQL: SELECT t2.img,t1.id,t2.title,t2.url FROM cs_ad_list t1 left JOIN cs_ad_content t2 on t1.id = t2.ad_list_id  WHERE ( t1.simple_code='footer' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000720s ]
+SQL: SHOW COLUMNS FROM `cs_content_content` [ RunTime:0.023291s ]
+SQL: SELECT * FROM `cs_content_content` WHERE ( `col_id` = 49 ) AND ( `status` = 1 ) ORDER BY istop desc,create_time desc,update_time desc  [ RunTime:0.000879s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 49 ) LIMIT 1   [ RunTime:0.000748s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000091s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000182s ]
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\9191bbf4b5b0da2785ad1f0619dfa3c1.php 第 120 行.
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\9191bbf4b5b0da2785ad1f0619dfa3c1.php 第 121 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.029520s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029654s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.002554s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002681s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.003310s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003445s ]
+
+[ 2018-11-08T15:25:28+08:00 ] 192.168.0.43 /web/about/content/id/50/ptpcode/LMJS
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002902s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005130s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `cs_content_category` [ RunTime:0.026897s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = 0 ) AND ( `status` = 1 ) ORDER BY sort asc  [ RunTime:0.001277s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 41 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000824s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 46 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000732s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 52 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000607s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'LMJS' ) LIMIT 1   [ RunTime:0.000665s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'LMJS' ) LIMIT 1   [ RunTime:0.000718s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `status` = 1 ) AND ( `pid` = 46 ) ORDER BY sort asc  [ RunTime:0.001141s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( tpcode='LMJS' and pid=0 ) LIMIT 1   [ RunTime:0.005729s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( id='50' ) LIMIT 1   [ RunTime:0.001114s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 50 ) LIMIT 1   [ RunTime:0.000868s ]
+SQL: SHOW COLUMNS FROM cs_ad_list t1 [ RunTime:0.000511s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't1' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_ad_list t1
+SQL: SELECT t2.img,t1.id,t2.title,t2.url FROM cs_ad_list t1 left JOIN cs_ad_content t2 on t1.id = t2.ad_list_id  WHERE ( t1.simple_code='LMJS' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000822s ]
+SQL: SHOW COLUMNS FROM `cs_content_content` [ RunTime:0.023870s ]
+SQL: SELECT * FROM `cs_content_content` WHERE ( `col_id` = 50 ) AND ( `status` = 1 ) ORDER BY istop desc,create_time desc,update_time desc  [ RunTime:0.001400s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 50 ) LIMIT 1   [ RunTime:0.000995s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000139s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000295s ]
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\9191bbf4b5b0da2785ad1f0619dfa3c1.php 第 120 行.
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\9191bbf4b5b0da2785ad1f0619dfa3c1.php 第 121 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.042823s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043040s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.003522s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003710s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.004964s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005162s ]
+
+[ 2018-11-08T15:25:30+08:00 ] 192.168.0.43 /web/about/content/ptpcode/XJWWH
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.003753s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007008s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `cs_content_category` [ RunTime:0.021922s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = 0 ) AND ( `status` = 1 ) ORDER BY sort asc  [ RunTime:0.001059s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 41 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000716s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 46 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000728s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 52 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000704s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'XJWWH' ) LIMIT 1   [ RunTime:0.000754s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'XJWWH' ) LIMIT 1   [ RunTime:0.000778s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `status` = 1 ) AND ( `pid` = 52 ) ORDER BY sort asc  [ RunTime:0.000954s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'XJWWH' ) LIMIT 1   [ RunTime:0.000737s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = 52 ) AND ( `status` = 1 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000834s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( tpcode='XJWWH' and pid=0 ) LIMIT 1   [ RunTime:0.000730s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( id='53' ) LIMIT 1   [ RunTime:0.000726s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 53 ) LIMIT 1   [ RunTime:0.000747s ]
+SQL: SHOW COLUMNS FROM cs_ad_list t1 [ RunTime:0.000507s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't1' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_ad_list t1
+SQL: SELECT t2.img,t1.id,t2.title,t2.url FROM cs_ad_list t1 left JOIN cs_ad_content t2 on t1.id = t2.ad_list_id  WHERE ( t1.simple_code='XJWWH' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000692s ]
+SQL: SHOW COLUMNS FROM `cs_content_content` [ RunTime:0.022310s ]
+SQL: SELECT * FROM `cs_content_content` WHERE ( `col_id` = 53 ) AND ( `status` = 1 ) ORDER BY istop desc,create_time desc,update_time desc  [ RunTime:0.000927s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 53 ) LIMIT 1   [ RunTime:0.000749s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000138s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000297s ]
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\9191bbf4b5b0da2785ad1f0619dfa3c1.php 第 120 行.
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\9191bbf4b5b0da2785ad1f0619dfa3c1.php 第 121 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.032192s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032294s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.003039s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003142s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.003916s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004066s ]
+
+[ 2018-11-08T15:25:32+08:00 ] 192.168.0.43 /web/about/content/ptpcode/header.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.003888s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006123s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `cs_content_category` [ RunTime:0.029595s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = 0 ) AND ( `status` = 1 ) ORDER BY sort asc  [ RunTime:0.001346s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 41 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000882s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 46 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000680s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 52 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000668s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'header' ) LIMIT 1   [ RunTime:0.000969s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'header' ) LIMIT 1   [ RunTime:0.000874s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `status` = 1 ) AND ( `pid` = null ) ORDER BY sort asc  [ RunTime:0.000940s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'header' ) LIMIT 1   [ RunTime:0.001227s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = null ) AND ( `status` = 1 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000940s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( tpcode='header' and pid=0 ) LIMIT 1   [ RunTime:0.000686s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( id='' ) LIMIT 1   [ RunTime:0.000631s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = null ) LIMIT 1   [ RunTime:0.000801s ]
+SQL: SHOW COLUMNS FROM cs_ad_list t1 [ RunTime:0.000507s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't1' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_ad_list t1
+SQL: SELECT t2.img,t1.id,t2.title,t2.url FROM cs_ad_list t1 left JOIN cs_ad_content t2 on t1.id = t2.ad_list_id  WHERE ( t1.simple_code='header' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000620s ]
+SQL: SHOW COLUMNS FROM `cs_content_content` [ RunTime:0.023172s ]
+SQL: SELECT * FROM `cs_content_content` WHERE ( `col_id` = 0 ) AND ( `status` = 1 ) ORDER BY istop desc,create_time desc,update_time desc  [ RunTime:0.001431s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 0 ) LIMIT 1   [ RunTime:0.000924s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000183s ]
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\9191bbf4b5b0da2785ad1f0619dfa3c1.php 第 120 行.
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\9191bbf4b5b0da2785ad1f0619dfa3c1.php 第 121 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.034953s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035109s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.003326s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003427s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.003659s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003808s ]
+
+[ 2018-11-08T15:25:33+08:00 ] 192.168.0.43 /web/about/content/ptpcode/footer.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.005403s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007654s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `cs_content_category` [ RunTime:0.019583s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = 0 ) AND ( `status` = 1 ) ORDER BY sort asc  [ RunTime:0.000891s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 41 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000597s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 46 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000631s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 52 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000657s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'footer' ) LIMIT 1   [ RunTime:0.000719s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'footer' ) LIMIT 1   [ RunTime:0.000658s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `status` = 1 ) AND ( `pid` = null ) ORDER BY sort asc  [ RunTime:0.000741s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'footer' ) LIMIT 1   [ RunTime:0.000669s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = null ) AND ( `status` = 1 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000752s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( tpcode='footer' and pid=0 ) LIMIT 1   [ RunTime:0.000649s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( id='' ) LIMIT 1   [ RunTime:0.000579s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = null ) LIMIT 1   [ RunTime:0.000630s ]
+SQL: SHOW COLUMNS FROM cs_ad_list t1 [ RunTime:0.000587s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't1' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_ad_list t1
+SQL: SELECT t2.img,t1.id,t2.title,t2.url FROM cs_ad_list t1 left JOIN cs_ad_content t2 on t1.id = t2.ad_list_id  WHERE ( t1.simple_code='footer' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000697s ]
+SQL: SHOW COLUMNS FROM `cs_content_content` [ RunTime:0.018877s ]
+SQL: SELECT * FROM `cs_content_content` WHERE ( `col_id` = 0 ) AND ( `status` = 1 ) ORDER BY istop desc,create_time desc,update_time desc  [ RunTime:0.000979s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 0 ) LIMIT 1   [ RunTime:0.000670s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000085s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000180s ]
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\9191bbf4b5b0da2785ad1f0619dfa3c1.php 第 120 行.
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\9191bbf4b5b0da2785ad1f0619dfa3c1.php 第 121 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.031198s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031346s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.002835s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002986s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.003436s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003547s ]
+
+[ 2018-11-08T15:25:37+08:00 ] 192.168.0.43 /web/about/content/id/54/ptpcode/XJWWH
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.003608s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006159s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `cs_content_category` [ RunTime:0.020035s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = 0 ) AND ( `status` = 1 ) ORDER BY sort asc  [ RunTime:0.000949s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 41 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000670s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 46 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000671s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 52 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000688s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'XJWWH' ) LIMIT 1   [ RunTime:0.000744s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'XJWWH' ) LIMIT 1   [ RunTime:0.000726s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `status` = 1 ) AND ( `pid` = 52 ) ORDER BY sort asc  [ RunTime:0.000974s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( tpcode='XJWWH' and pid=0 ) LIMIT 1   [ RunTime:0.000801s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( id='54' ) LIMIT 1   [ RunTime:0.000783s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 54 ) LIMIT 1   [ RunTime:0.000793s ]
+SQL: SHOW COLUMNS FROM cs_ad_list t1 [ RunTime:0.000510s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't1' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_ad_list t1
+SQL: SELECT t2.img,t1.id,t2.title,t2.url FROM cs_ad_list t1 left JOIN cs_ad_content t2 on t1.id = t2.ad_list_id  WHERE ( t1.simple_code='XJWWH' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000636s ]
+SQL: SHOW COLUMNS FROM `cs_content_content` [ RunTime:0.020942s ]
+SQL: SELECT * FROM `cs_content_content` WHERE ( `col_id` = 54 ) AND ( `status` = 1 ) ORDER BY istop desc,create_time desc,update_time desc  [ RunTime:0.000797s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 54 ) LIMIT 1   [ RunTime:0.000748s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000089s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000186s ]
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\9191bbf4b5b0da2785ad1f0619dfa3c1.php 第 120 行.
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\9191bbf4b5b0da2785ad1f0619dfa3c1.php 第 121 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.028705s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028818s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.002495s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002587s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.002806s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002900s ]
+
+[ 2018-11-08T15:25:39+08:00 ] 192.168.0.43 /web/about/content/id/54/ptpcode/header.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002808s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004851s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `cs_content_category` [ RunTime:0.024163s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = 0 ) AND ( `status` = 1 ) ORDER BY sort asc  [ RunTime:0.001076s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 41 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000798s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 46 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000735s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 52 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000674s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'header' ) LIMIT 1   [ RunTime:0.000807s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'header' ) LIMIT 1   [ RunTime:0.000733s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `status` = 1 ) AND ( `pid` = null ) ORDER BY sort asc  [ RunTime:0.000767s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( tpcode='header' and pid=0 ) LIMIT 1   [ RunTime:0.000716s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( id='54' ) LIMIT 1   [ RunTime:0.000750s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 54 ) LIMIT 1   [ RunTime:0.000821s ]
+SQL: SHOW COLUMNS FROM cs_ad_list t1 [ RunTime:0.000476s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't1' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_ad_list t1
+SQL: SELECT t2.img,t1.id,t2.title,t2.url FROM cs_ad_list t1 left JOIN cs_ad_content t2 on t1.id = t2.ad_list_id  WHERE ( t1.simple_code='header' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000689s ]
+SQL: SHOW COLUMNS FROM `cs_content_content` [ RunTime:0.022057s ]
+SQL: SELECT * FROM `cs_content_content` WHERE ( `col_id` = 54 ) AND ( `status` = 1 ) ORDER BY istop desc,create_time desc,update_time desc  [ RunTime:0.000847s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 54 ) LIMIT 1   [ RunTime:0.000780s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000085s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000176s ]
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\9191bbf4b5b0da2785ad1f0619dfa3c1.php 第 120 行.
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\9191bbf4b5b0da2785ad1f0619dfa3c1.php 第 121 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.028849s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028949s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.002616s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002704s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.003066s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003182s ]
+
+[ 2018-11-08T15:25:40+08:00 ] 192.168.0.43 /web/about/content/id/54/ptpcode/footer.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.003834s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006036s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `cs_content_category` [ RunTime:0.024803s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = 0 ) AND ( `status` = 1 ) ORDER BY sort asc  [ RunTime:0.001191s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 41 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000792s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 46 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000837s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 52 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000769s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'footer' ) LIMIT 1   [ RunTime:0.000767s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'footer' ) LIMIT 1   [ RunTime:0.000916s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `status` = 1 ) AND ( `pid` = null ) ORDER BY sort asc  [ RunTime:0.000795s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( tpcode='footer' and pid=0 ) LIMIT 1   [ RunTime:0.000915s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( id='54' ) LIMIT 1   [ RunTime:0.000965s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 54 ) LIMIT 1   [ RunTime:0.000887s ]
+SQL: SHOW COLUMNS FROM cs_ad_list t1 [ RunTime:0.000509s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't1' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_ad_list t1
+SQL: SELECT t2.img,t1.id,t2.title,t2.url FROM cs_ad_list t1 left JOIN cs_ad_content t2 on t1.id = t2.ad_list_id  WHERE ( t1.simple_code='footer' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000787s ]
+SQL: SHOW COLUMNS FROM `cs_content_content` [ RunTime:0.023340s ]
+SQL: SELECT * FROM `cs_content_content` WHERE ( `col_id` = 54 ) AND ( `status` = 1 ) ORDER BY istop desc,create_time desc,update_time desc  [ RunTime:0.000896s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 54 ) LIMIT 1   [ RunTime:0.000812s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000138s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000289s ]
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\9191bbf4b5b0da2785ad1f0619dfa3c1.php 第 120 行.
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\9191bbf4b5b0da2785ad1f0619dfa3c1.php 第 121 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.039693s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039844s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.003322s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003464s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.003718s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003862s ]
+
+[ 2018-11-08T15:25:45+08:00 ] 192.168.0.43 /web/about/content/id/55/ptpcode/XJWWH
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002900s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005022s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `cs_content_category` [ RunTime:0.022344s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = 0 ) AND ( `status` = 1 ) ORDER BY sort asc  [ RunTime:0.001081s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 41 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000710s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 46 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000743s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 52 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000704s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'XJWWH' ) LIMIT 1   [ RunTime:0.000805s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'XJWWH' ) LIMIT 1   [ RunTime:0.000764s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `status` = 1 ) AND ( `pid` = 52 ) ORDER BY sort asc  [ RunTime:0.001065s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( tpcode='XJWWH' and pid=0 ) LIMIT 1   [ RunTime:0.001243s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( id='55' ) LIMIT 1   [ RunTime:0.000901s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 55 ) LIMIT 1   [ RunTime:0.000854s ]
+SQL: SHOW COLUMNS FROM cs_ad_list t1 [ RunTime:0.000528s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't1' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_ad_list t1
+SQL: SELECT t2.img,t1.id,t2.title,t2.url FROM cs_ad_list t1 left JOIN cs_ad_content t2 on t1.id = t2.ad_list_id  WHERE ( t1.simple_code='XJWWH' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000745s ]
+SQL: SHOW COLUMNS FROM `cs_content_content` [ RunTime:0.021480s ]
+SQL: SELECT * FROM `cs_content_content` WHERE ( `col_id` = 55 ) AND ( `status` = 1 ) ORDER BY istop desc,create_time desc,update_time desc  [ RunTime:0.000827s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 55 ) LIMIT 1   [ RunTime:0.000774s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000083s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000180s ]
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\9191bbf4b5b0da2785ad1f0619dfa3c1.php 第 120 行.
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\9191bbf4b5b0da2785ad1f0619dfa3c1.php 第 121 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.033561s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033677s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.003080s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003184s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.002935s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003033s ]
+
+[ 2018-11-08T15:25:46+08:00 ] 192.168.0.43 /web/about/content/id/55/ptpcode/header.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002945s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005127s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `cs_content_category` [ RunTime:0.024695s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = 0 ) AND ( `status` = 1 ) ORDER BY sort asc  [ RunTime:0.001251s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 41 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000864s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 46 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000688s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 52 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000657s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'header' ) LIMIT 1   [ RunTime:0.000778s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'header' ) LIMIT 1   [ RunTime:0.000813s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `status` = 1 ) AND ( `pid` = null ) ORDER BY sort asc  [ RunTime:0.000833s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( tpcode='header' and pid=0 ) LIMIT 1   [ RunTime:0.000911s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( id='55' ) LIMIT 1   [ RunTime:0.000863s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 55 ) LIMIT 1   [ RunTime:0.000905s ]
+SQL: SHOW COLUMNS FROM cs_ad_list t1 [ RunTime:0.000482s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't1' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_ad_list t1
+SQL: SELECT t2.img,t1.id,t2.title,t2.url FROM cs_ad_list t1 left JOIN cs_ad_content t2 on t1.id = t2.ad_list_id  WHERE ( t1.simple_code='header' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000795s ]
+SQL: SHOW COLUMNS FROM `cs_content_content` [ RunTime:0.027338s ]
+SQL: SELECT * FROM `cs_content_content` WHERE ( `col_id` = 55 ) AND ( `status` = 1 ) ORDER BY istop desc,create_time desc,update_time desc  [ RunTime:0.001017s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 55 ) LIMIT 1   [ RunTime:0.000987s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000137s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000268s ]
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\9191bbf4b5b0da2785ad1f0619dfa3c1.php 第 120 行.
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\9191bbf4b5b0da2785ad1f0619dfa3c1.php 第 121 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.038573s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038758s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.002696s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002832s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.002999s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003138s ]
+
+[ 2018-11-08T15:25:48+08:00 ] 192.168.0.43 /web/about/content/id/55/ptpcode/footer.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002934s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005033s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead C:\phpStudy\PHPTutorial\WWW\zwt45\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `cs_content_category` [ RunTime:0.029120s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `pid` = 0 ) AND ( `status` = 1 ) ORDER BY sort asc  [ RunTime:0.001401s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 41 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000925s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 46 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000846s ]
+SQL: SELECT `col_url` FROM `cs_content_category` WHERE ( `pid` = 52 ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000845s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'footer' ) LIMIT 1   [ RunTime:0.000850s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `tpcode` = 'footer' ) LIMIT 1   [ RunTime:0.000819s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `status` = 1 ) AND ( `pid` = null ) ORDER BY sort asc  [ RunTime:0.000883s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( tpcode='footer' and pid=0 ) LIMIT 1   [ RunTime:0.000891s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( id='55' ) LIMIT 1   [ RunTime:0.000964s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 55 ) LIMIT 1   [ RunTime:0.000943s ]
+SQL: SHOW COLUMNS FROM cs_ad_list t1 [ RunTime:0.000511s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't1' at line 1
+ [ SQL语句 ] : SHOW COLUMNS FROM cs_ad_list t1
+SQL: SELECT t2.img,t1.id,t2.title,t2.url FROM cs_ad_list t1 left JOIN cs_ad_content t2 on t1.id = t2.ad_list_id  WHERE ( t1.simple_code='footer' ) ORDER BY sort asc LIMIT 1   [ RunTime:0.000746s ]
+SQL: SHOW COLUMNS FROM `cs_content_content` [ RunTime:0.023805s ]
+SQL: SELECT * FROM `cs_content_content` WHERE ( `col_id` = 55 ) AND ( `status` = 1 ) ORDER BY istop desc,create_time desc,update_time desc  [ RunTime:0.000994s ]
+SQL: SELECT * FROM `cs_content_category` WHERE ( `id` = 55 ) LIMIT 1   [ RunTime:0.000903s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000085s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000180s ]
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\9191bbf4b5b0da2785ad1f0619dfa3c1.php 第 120 行.
+NOTIC: [8] Undefined variable: adimg C:\phpStudy\PHPTutorial\WWW\zwt45\Application\Runtime\Cache\Web\9191bbf4b5b0da2785ad1f0619dfa3c1.php 第 121 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.033190s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033350s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.003456s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003582s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.003406s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003517s ]
+
