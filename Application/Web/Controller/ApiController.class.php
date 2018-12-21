@@ -57,7 +57,7 @@ class AboutController extends CommonController
         ),JSON_UNESCAPED_UNICODE);
         
         //转换成字符串JSON
-        // print($json);exit;
+        print($json);exit;
 
 
 		// var_dump($news);exit;
