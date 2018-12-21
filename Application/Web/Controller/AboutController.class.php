@@ -54,7 +54,7 @@ class AboutController extends CommonController
             "message"=>"查询成功！",
             "data"=>$news_interface,
             "page"=>$page_detail
-        ));
+        ),JSON_UNESCAPED_UNICODE);
         
         //转换成字符串JSON
         print($json);exit;
