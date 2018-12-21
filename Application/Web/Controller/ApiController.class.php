@@ -2,7 +2,7 @@
 namespace Web\Controller;
 use Think\Controller;
 
-class AboutController extends CommonController
+class ApiController extends CommonController
 {
 
 	//不带分页内容获取控制器
