@@ -29,7 +29,7 @@ class AboutController extends CommonController
 		// 默认是第一个
 		$page = empty(I('page'))?1:I('page');
 		$each =2;
-		$news=M("content_content")->where($map)->order('istop desc,create_time desc,update_time desc')->limit($each*($page-1),$each)->select();
+		$news=M("content_content")->where($map)->order('istop desc,create_time desc,id desc,update_time desc')->limit($each*($page-1),$each)->select();
 
 
 		// 接口
