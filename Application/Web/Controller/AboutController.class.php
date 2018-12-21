@@ -28,7 +28,7 @@ class AboutController extends CommonController
 		// $news=M("content_content")->where($map)->order('istop desc,create_time desc,update_time desc')->limit($p->limit[0],$p->limit[1])->select();
 		// 默认是第一个
 		$page = empty(I('page'))?1:I('page');
-		$each =10;
+		$each =2;
 		$news=M("content_content")->where($map)->order('istop desc,create_time desc,update_time desc')->limit($each*($page-1),$each)->select();
 
 
