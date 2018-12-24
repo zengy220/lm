@@ -91,6 +91,18 @@ class ApiController extends CommonController
 			}
 		}
 		$now_info = M("content_content")->where("id=$news_id")->find();
+		// var_dump($now_info);exit;
+		$json = json_encode(array(
+            "resultCode"=>200,
+            "message"=>"查询成功！",
+            "data"=>$now_info
+        ),JSON_UNESCAPED_UNICODE);
+        
+        //转换成字符串JSON
+        // $json = json_decode($json);
+        print($json);exit;
+
+
 		$this->assign("now_info",$now_info);
 		$this->assign("preInfo",$preInfo);
 		$this->assign("nextInfo",$nextInfo);
