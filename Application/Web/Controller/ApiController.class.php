@@ -114,74 +114,32 @@ class ApiController extends CommonController
 		$this->display('page_detail');
 	}
 
-	//招商版块
-	public function join_us(){
+	public function ad(){
 
-		if(IS_POST){
-			$_POST['region'] = $_POST['s_province'].$_POST['s_city'].$_POST['s_county'];
-			$_POST['createtime'] = date("Y-m-d H:i:s");
-			$res = M("attract_investment")->add($_POST);
-			if($res){
+		$banner = M("ad_content as t1")->join("cs_ad_list as t2 on t1.ad_list_id=t2.id")->where("t2.simple_code='SYLB1'")->field("t1.url")->select();
 
-				// echo  1;exit;
-			}else{
-				// echo  0;exit;
-			}
-		}
-		$this->display();
-	}
-
-	//商品列表页
-	public function products_list(){
-		$sarr = array(0,2);
-		$pmap['sort2'] = array('in',$sarr);
-		$count=M("pro")->where($pmap)->count();
-		$p=new \Org\Util\Page($count,9);
-		$show=$p->show();
-		$productList = M("pro")->where($pmap)->order('sort asc')->field('id,thumb,names')->limit($p->limit[0],$p->limit[1])->select();
-		$this->assign("productList",$productList);
-		$this->assign("show",$show);
-		$this->display('products_list');
-	}
-
-	//商品详情页
-	public function products_detail(){
-		$pro_id = I('pro_id');
-		$sarr = array(0,2);
-		$map['sort2'] = array('in',$sarr);
-		$pro_id_array=M("pro")->where($map)->field('names,id')->order('sort asc')->select();
-		$preInfo = array();//上一篇
-		$nextInfo = array();//下一篇
-		foreach($pro_id_array as $key=>$v){
-			if($v['id'] == $pro_id){
-				$pk = $key-1;
-				$nk = $key+1;
-				if($pk>=0){
-					$preInfo['id'] = $pro_id_array[$pk]['id'];
-					$preInfo['title'] = $pro_id_array[$pk]['names'];
-				}
-				if($nk < count($pro_id_array)){
-					$nextInfo['id'] = $pro_id_array[$nk]['id'];
-					$nextInfo['title'] = $pro_id_array[$nk]['names'];
-				}
-				break;
-			}
+		foreach($banner as &$v){
+			$v['imgurl'] = $remote_server="http://".$_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT']."/upfile/".$v['img'];
 		}
 
-		$now_info = M("pro")->where("id=$pro_id")->find();
-		$this->assign("now_info",$now_info);
-		$this->assign("preInfo",$preInfo);
-		$this->assign("nextInfo",$nextInfo);
-		$this->display('products_detail');
+	
+		
+
+		$json = json_encode(array(
+            "resultCode"=>200,
+            "message"=>"查询成功！",
+            "data"=>$banner
+        ),JSON_UNESCAPED_UNICODE);
+        
+        //转换成字符串JSON
+        // $json = json_decode($json);
+        print($json);exit;
+
+
+
+		// var_dump($banner);exit;
+
 	}
-
-	//地图
-	 public function map()
-    {
-        $this->display();
-    }
-
-
 
 
 }
