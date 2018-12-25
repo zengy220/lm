@@ -22,8 +22,19 @@ class ApiController extends CommonController
 	//带分页内容获取控制器
     public function page_content()
     {
-    	header('Access-Control-Allow-Origin:*');//允许所有来源访问
-		header('Access-Control-Allow-Method:POST,GET');//允许访问的方式
+    	session_start();
+		// 是否存在请求源
+		if(isset($_SERVER["HTTP_ORIGIN"])) {
+		    header('Access-Control-Allow-Origin:'.$_SERVER["HTTP_ORIGIN"]);  
+		}
+		header('Access-Control-Allow-Origin:null');  
+		header('Access-Control-Allow-Methods:OPTIONS, GET, POST');
+		header('Access-Control-Allow-Headers:x-requested-with');
+		header('Access-Control-Max-Age:86400');
+
+		header('Access-Control-Allow-Credentials:true');
+
+
 
 		$map['col_id'] = $this->id;
 		$map['status'] = 1;
