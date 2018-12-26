@@ -26,6 +26,7 @@ class ApiController extends CommonController
 			$news_interface[$k]['image']="http://".$_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT'].$news[$k]['thumb'];
 			$news_interface[$k]['id']=$news[$k]['id'];
 			$news_interface[$k]['content']=$news[$k]['contents'];
+			$news_interface[$k]['description']=$news[$k]['description'];
 			$news_interface[$k]['time']=$news[$k]['create_time'];
 		}
 		//page
