@@ -5,25 +5,13 @@ use Think\Controller;
 class ApiController extends CommonController
 {
 
-
-
-	//不带分页内容获取控制器
-    public function content()
-    {
-
-        $map['col_id'] = $this->id;
-        $map['status'] = 1;
-        $contents = M('content_content')->order('istop desc,create_time desc,update_time desc')->where($map)->select();
-        $this->assign('contents',$contents);
-        $this->display($this->getTplById($this->id));
-    }
-
-	//带分页内容获取控制器
+	//内容获取控制器
     public function page_content()
     {
     	//允许跨域请求
     	$this->attend();
-		$map['col_id'] = $this->id;
+		// $map['col_id'] = $this->id;
+		$map['col_id'] = I('id');
 		$map['status'] = 1;
 		$count=M("content_content")->where($map)->count();
 		// 默认是第一个
@@ -58,7 +46,7 @@ class ApiController extends CommonController
 
     }
 
-	//带上下篇内容控制器
+	//内容控制器详情
 	public function page_detail(){
 		//允许跨域请求
     	$this->attend();
@@ -79,6 +67,7 @@ class ApiController extends CommonController
         print($json);exit;
 	}
 
+	//广告内容接口
 	public function ad(){
 		//允许跨域请求
 		$this->attend();
@@ -88,9 +77,6 @@ class ApiController extends CommonController
 		foreach($banner as &$v){
 			$v['imgurl'] = $remote_server="http://".$_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT']."/upfile/".$v['img'];
 		}
-
-	
-		
 
 		$json = json_encode(array(
             "resultCode"=>200,
@@ -102,6 +88,14 @@ class ApiController extends CommonController
         print($json);exit;
 	}
 
+
+
+
+
+
+
+
+	//允许跨域请求函数
 	function attend(){
 		header('Access-Control-Allow-Methods:OPTIONS, GET, POST');
 		header('Access-Control-Allow-Headers:x-requested-with');
@@ -111,7 +105,6 @@ class ApiController extends CommonController
 		header('Access-Control-Allow-Methods:GET, POST, PUT, DELETE, OPTIONS');
 		header('Access-Control-Allow-Headers:x-requested-with,content-type');
 		header('Access-Control-Allow-Headers:Origin, No-Cache, X-Requested-With, If-Modified-Since, Pragma, Last-Modified, Cache-Control, Expires, Content-Type, X-E4M-With');
-
 		header('Access-Control-Allow-Origin:*');//允许所有来源访问
 		header('Access-Control-Allow-Method:POST,GET');//允许访问的方式
 	}
