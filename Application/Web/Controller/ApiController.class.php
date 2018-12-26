@@ -23,7 +23,7 @@ class ApiController extends CommonController
 		// 接口
 		foreach ($news as $k => $v) {
 			$news_interface[$k]['title']=$news[$k]['title'];
-			$news_interface[$k]['image']=$news[$k]['thumb'];
+			$news_interface[$k]['image']="http://".$_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT'].$news[$k]['thumb'];
 			$news_interface[$k]['id']=$news[$k]['id'];
 			$news_interface[$k]['content']=$news[$k]['contents'];
 			$news_interface[$k]['time']=$news[$k]['create_time'];
@@ -108,6 +108,8 @@ class ApiController extends CommonController
 		header('Access-Control-Allow-Origin:*');//允许所有来源访问
 		header('Access-Control-Allow-Method:POST,GET');//允许访问的方式
 	}
+
+
 
 
 }
