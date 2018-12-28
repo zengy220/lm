@@ -13,8 +13,8 @@ class ApiController extends CommonController
     	//简述截取字符串个数
     	$lenght=300;
 		$tpcode = I('name');
-		if($tpcode=='XWZX'){
-			$tpcode ='XWZX2';
+		if($tpcode=='xwzx'){
+			$tpcode ='xwzx2';
 		}
 		$map['col_id'] = $this->getIdByTpcode($tpcode);
 		$map['status'] = 1;
