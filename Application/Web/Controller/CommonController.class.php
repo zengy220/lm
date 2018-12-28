@@ -82,4 +82,33 @@ class CommonController extends Controller
         return $pCol['tpl'];
     }
 
+    //文章简述函数
+    public function cutstr_html($content,$lenght){
+        //对传入的文章内容 $content 进行反转义
+        $content =html_entity_decode($content);
+        //用 strip_tags 函数去掉所有的 html 标签
+        $content =strip_tags($content);
+        //替换跳格
+        $content =ereg_replace("\t","", $content);
+        //替换换行符
+        $content =ereg_replace("\r\n","", $content);
+        $content =ereg_replace("\r","", $content);
+        $content =ereg_replace("\n","", $content);
+
+        //替换中、英文空格
+        $content =ereg_replace(" ","", $content);
+        $content =ereg_replace(" ","", $content);
+
+        //考虑到文章内容的长短、加个判断
+        //当要截取的字符串长度不为空和文章的内容的长度大于要截取的字符串长度时要截取，否则就不截取
+        if($lenght && mb_strlen(trim($content),'utf-8') > $lenght){
+            //用 mb_substr 把内容编码转换 utr-8再计算长度，并从第一个字符开始截取到指定长度，再加上省略号
+            return mb_substr(trim($content),0,$lenght,'utf-8').'...';
+        }else{
+            return trim($string);
+        }
+        
+
+    }
+
 }

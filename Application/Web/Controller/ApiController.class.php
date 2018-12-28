@@ -10,8 +10,13 @@ class ApiController extends CommonController
     {
     	//允许跨域请求
     	$this->attend();
-		// $map['col_id'] = $this->id;
-		$map['col_id'] = I('id');
+    	//简述截取字符串个数
+    	$lenght=300;
+		$tpcode = I('name');
+		if($tpcode=='XWZX'){
+			$tpcode ='XWZX2';
+		}
+		$map['col_id'] = $this->getIdByTpcode($tpcode);
 		$map['status'] = 1;
 		$count=M("content_content")->where($map)->count();
 		// 默认是第一个
@@ -25,8 +30,9 @@ class ApiController extends CommonController
 			$news_interface[$k]['title']=$news[$k]['title'];
 			$news_interface[$k]['image']="http://".$_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT'].$news[$k]['thumb'];
 			$news_interface[$k]['id']=$news[$k]['id'];
-			$news_interface[$k]['content']=$news[$k]['contents'];
-			$news_interface[$k]['description']=$news[$k]['description'];
+			// $news_interface[$k]['content']=$news[$k]['contents'];
+			//简述截取
+			$news_interface[$k]['description']=$this->cutstr_html($news[$k]['contents'],$lenght);
 			$news_interface[$k]['time']=$news[$k]['create_time'];
 		}
 		//page
@@ -109,6 +115,15 @@ class ApiController extends CommonController
 		header('Access-Control-Allow-Origin:*');//允许所有来源访问
 		header('Access-Control-Allow-Method:POST,GET');//允许访问的方式
 	}
+
+	//将获取的简码搜索出对应的id
+	// function tpcode(){
+	// 	$tpcode=I('name');
+	// 	$where['tpcode']=$tpcode;
+	// 	$data = M('content_category')->field('id')->where($where)->find();
+	// 	// var_dump($data['id']);exit;
+	// 	print_r($data);
+	// }
 
 
 
