@@ -111,4 +111,20 @@ class CommonController extends Controller
 
     }
 
+    //自动获取文章第一张图片
+   function get_html_first_imgurl($html){
+    $pattern = '~]*[\s]?[\/]?[\s]?>~';
+    preg_match_all($pattern, $html, $matches);//正则表达式把图片的整个都获取出来了
+    $img_arr = $matches[0];//全部图片数组
+    $first_img_url = "";
+    if (!empty($img_arr)) {
+        $first_img = $img_arr[0];
+        $p="#src=('|\")(.*)('|\")#isU";//正则表达式
+        preg_match_all ($p, $first_img, $img_val);
+        if(isset($img_val[2][0])){
+            $first_img_url = $img_val[2][0]; //获取第一张图片地址
+        }
+    }
+    return $first_img_url;
+
 }

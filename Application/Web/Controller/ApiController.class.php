@@ -28,8 +28,13 @@ class ApiController extends CommonController
 		// 接口
 		foreach ($news as $k => $v) {
 			$news_interface[$k]['title']=$news[$k]['title'];
+			//文章第一张图片
+			$first_image = $this->get_html_first_imgurl($news[$k]['contents']);
+			var_dump($first_image);exit;
 			if(!empty($news[$k]['thumb'])){
 				$news_interface[$k]['image']="http://".$_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT'].$news[$k]['thumb'];
+			}elseif (!empty($first_image)) {
+				$news_interface[$k]['image']=$first_image;
 			}else{
 				$news_interface[$k]['image']="http://".$_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT'].'/Public/'.'images/'.'new.jpg';
 			}
