@@ -30,7 +30,7 @@ class ApiController extends CommonController
 			$news_interface[$k]['title']=$news[$k]['title'];
 			//文章第一张图片
 			$first_image = $this->get_html_first_imgurl($news[$k]['contents']);
-			var_dump($first_image);exit;
+			// var_dump($first_image);exit;
 			if(!empty($news[$k]['thumb'])){
 				$news_interface[$k]['image']="http://".$_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT'].$news[$k]['thumb'];
 			}elseif (!empty($first_image)) {
