@@ -28,7 +28,11 @@ class ApiController extends CommonController
 		// 接口
 		foreach ($news as $k => $v) {
 			$news_interface[$k]['title']=$news[$k]['title'];
-			$news_interface[$k]['image']="http://".$_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT'].$news[$k]['thumb'];
+			if(!empty($news[$k]['thumb'])){
+				$news_interface[$k]['image']="http://".$_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT'].$news[$k]['thumb'];
+			}else{
+				$news_interface[$k]['image']="http://".$_SERVER['SERVER_NAME'].':'.$_SERVER['SERVER_PORT'].'/Public/'.'images/'.'new.jpg';
+			}
 			$news_interface[$k]['id']=$news[$k]['id'];
 			// $news_interface[$k]['content']=$news[$k]['contents'];
 			//简述截取
