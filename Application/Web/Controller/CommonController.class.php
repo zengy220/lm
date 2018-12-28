@@ -126,5 +126,7 @@ class CommonController extends Controller
         }
     }
     return $first_img_url;
+    }
 
+    
 }
