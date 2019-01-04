@@ -11,20 +11,12 @@ class TestController extends CommonController
     static $qrcode_get_url = "https://mp.weixin.qq.com/cgi-bin/showqrcode?";
 
     //生成二维码
-    // public function getEwm($fqid,$type = 1){
-    //     $appid = 'wxf5c587b2a0318235';
-    //     $secret = '71d9fe4c3242f9f09b5d760466b01b31';
-    //     $ACCESS_TOKEN = $this->getToken($appid,$secret);
-    //     $url = $this->getQrcodeurl($ACCESS_TOKEN,$fqid,$type);
-    //     save_log('测试保存的路径'.$url.'fid'.$fqid);
-    //     return $this->DownLoadQr($url,time());
-    // }
     public function index($fqid=1121,$type = 1){
         $appid = 'wxf5c587b2a0318235';
         $secret = '71d9fe4c3242f9f09b5d760466b01b31';
         $ACCESS_TOKEN = $this->getToken($appid,$secret);
         $url = $this->getQrcodeurl($ACCESS_TOKEN,$fqid,$type);
-        save_log('测试保存的路径'.$url.'fid'.$fqid);
+        $this->save_log('测试保存的路径'.$url.'fid'.$fqid);
         return $this->DownLoadQr($url,time());
     }
 
@@ -104,5 +96,32 @@ class TestController extends CommonController
         fwrite($logger, date('Y-m-d H:i:s')." Error Info : ".$errMsg."\r\n");
         fclose($logger);
     }
+
+    function save_log($res) {
+    $err_date = date("Ym", time());
+    //$address = '/var/log/error';
+    $address = './error';
+    if (!is_dir($address)) {
+        mkdir($address, 0700, true);
+    }
+    $address = $address.'/'.$err_date . '_error.log';
+    $error_date = date("Y-m-d H:i:s", time());
+    if(!empty($_SERVER['HTTP_REFERER'])) {
+        $file = $_SERVER['HTTP_REFERER'];
+    } else {
+        $file = $_SERVER['REQUEST_URI'];
+    }
+    if(is_array($res)) {
+        $res_real = "$error_date\t$file\n";
+        error_log($res_real, 3, $address);
+        $res = var_export($res,true);
+        $res = $res."\n";
+        error_log($res, 3, $address);
+    } else {
+        $res_real = "$error_date\t$file\t$res\n";
+        error_log($res_real, 3, $address);
+    }
+}
+
 
 }
