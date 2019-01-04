@@ -4,7 +4,7 @@ use Think\Controller;
 
 class TestController extends CommonController
 {
-    var_dump(112);exit;
+    // var_dump(112);exit;
     //构造方法
     static $qrcode_url = "https://api.weixin.qq.com/cgi-bin/qrcode/create?";
     static $token_url = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&";
